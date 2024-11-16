@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "api/v1")
+@RequestMapping(value = "api/v1/vendor")
 @CrossOrigin
 public class VendorController {
 
@@ -24,9 +24,14 @@ public class VendorController {
         return userDTO;
     }
 
-    @PostMapping("/vendorRegister")
-    public void vendorRegister(@RequestBody VendorDTO vendorDTO) {
-        vendorService.vendorRegister(vendorDTO);
+    @PostMapping("/register")
+    public void registerVendor(@RequestBody VendorDTO vendorDTO) {
+        vendorService.registerVendor(vendorDTO);
+    }
+
+    @PutMapping("/update/{vendorID}")
+    public void updateVendor(@PathVariable int vendorID, @RequestBody VendorDTO vendorDTO) {
+        vendorService.updateVendor(vendorID,vendorDTO);
     }
 
     @PostMapping("/{vendorID}/releaseTickets")
