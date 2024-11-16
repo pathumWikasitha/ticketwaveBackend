@@ -1,8 +1,10 @@
-package com.ticketWave.ticketWave.model;
+package com.ticketWave.ticketWave.dto;
 
+import com.ticketWave.ticketWave.model.Ticket;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,18 +12,12 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class TicketPool {
+@Component
+public class TicketPoolDTO {
     private final List<Ticket> synTicketList;
-    private final int maxCapacity;
 
-    public TicketPool() {
+    public TicketPoolDTO() {
         this.synTicketList = Collections.synchronizedList(new ArrayList<>());
-        this.maxCapacity = new Configuration().getMaxTicketCapacity();
-    }
-
-
-    public int getCurrentPoolSize() {
-        return synTicketList.size();
     }
 
 }
