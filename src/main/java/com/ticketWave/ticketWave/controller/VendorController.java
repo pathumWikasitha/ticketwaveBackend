@@ -5,6 +5,7 @@ import com.ticketWave.ticketWave.dto.UserDTO;
 import com.ticketWave.ticketWave.dto.VendorDTO;
 import com.ticketWave.ticketWave.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,26 +17,35 @@ public class VendorController {
     private VendorService vendorService;
 
     @GetMapping("/{vendorID}")
-    public UserDTO getVendor(@PathVariable int vendorID) {
-        UserDTO userDTO = vendorService.getVendor(vendorID);
-        if (userDTO == null) {
-            return null;
+    public ResponseEntity<VendorDTO> getVendor(@PathVariable int vendorID) {
+        VendorDTO vendor = vendorService.getVendor(vendorID);
+        if (vendor == null) {
+            return ResponseEntity.notFound().build();
         }
-        return userDTO;
+        return ResponseEntity.ok(vendor);
     }
 
     @PostMapping("/register")
-    public void registerVendor(@RequestBody VendorDTO vendorDTO) {
-        vendorService.registerVendor(vendorDTO);
+    public ResponseEntity<String> registerVendor(@RequestBody VendorDTO vendorDTO) {
+        VendorDTO vendor = vendorService.registerVendor(vendorDTO);
+        if (vendor == null) {
+            return ResponseEntity.badRequest().build();
+        }
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("/update/{vendorID}")
-    public void updateVendor(@PathVariable int vendorID, @RequestBody VendorDTO vendorDTO) {
-        vendorService.updateVendor(vendorID,vendorDTO);
+    public ResponseEntity<String> updateVendor(@PathVariable int vendorID, @RequestBody VendorDTO vendorDTO) {
+        VendorDTO vendor  = vendorService.updateVendor(vendorID,vendorDTO);
+        if (vendor == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/{vendorID}/releaseTickets/{ticketCount}")
-    public void releaseTickets(@PathVariable int vendorID, @PathVariable int ticketCount,@RequestBody TicketDTO ticket) {
+    public ResponseEntity<String> releaseTickets(@PathVariable int vendorID, @PathVariable int ticketCount,@RequestBody TicketDTO ticket) {
         vendorService.releaseTickets(vendorID, ticketCount , ticket);
+        return ResponseEntity.accepted().build();
     }
 }

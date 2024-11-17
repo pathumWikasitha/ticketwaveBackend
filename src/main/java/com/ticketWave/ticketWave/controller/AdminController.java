@@ -2,11 +2,13 @@ package com.ticketWave.ticketWave.controller;
 
 import com.ticketWave.ticketWave.dto.AdminDTO;
 import com.ticketWave.ticketWave.dto.ConfigurationDTO;
+import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.service.AdminService;
 import com.ticketWave.ticketWave.service.ConfigurationService;
 import com.ticketWave.ticketWave.service.CustomerService;
 import com.ticketWave.ticketWave.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,40 +28,79 @@ public class AdminController {
     @Autowired
     private CustomerService customerService;
 
+    @Autowired
+    private SystemDTO systemDTO;
+
     @GetMapping("/getConfiguration")
-    public ConfigurationDTO getConfiguration() {
-        return configurationService.getConfiguration();
+    public ResponseEntity<ConfigurationDTO> getConfiguration() {
+        ConfigurationDTO configurationDTO = configurationService.getConfiguration();
+        if (configurationDTO == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(configurationDTO);
     }
 
     @PostMapping("/setConfiguration")
-    public void setConfiguration(@RequestBody ConfigurationDTO configurationDTO) {
-        configurationService.setConfiguration(configurationDTO);
+    public ResponseEntity<String> setConfiguration(@RequestBody ConfigurationDTO configurationDTO) {
+        ConfigurationDTO config = configurationService.setConfiguration(configurationDTO);
+        if (config == null) {
+            return ResponseEntity.badRequest().build();
+        } else {
+            return ResponseEntity.ok("Configuration saved successfully");
+        }
     }
 
     @DeleteMapping("/deleteConfiguration")
-    public void deleteConfiguration() {
+    public ResponseEntity<String> deleteConfiguration() {
         configurationService.deleteConfiguration();
+        return ResponseEntity.ok("Configuration deleted successfully");
+    }
+
+    @GetMapping("/{adminID}")
+    public ResponseEntity<AdminDTO> getAdminByID(@PathVariable int adminID) {
+        AdminDTO adminDTO = adminService.getAdminByID(adminID);
+        if (adminDTO == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(adminDTO);
     }
 
     @PostMapping("/register")
-    public void registerAdmin(@RequestBody AdminDTO adminDTO) {
-        adminService.registerAdmin(adminDTO);
+    public ResponseEntity<String> registerAdmin(@RequestBody AdminDTO adminDTO) {
+        AdminDTO admin = adminService.registerAdmin(adminDTO);
+        if (admin == null) {
+            return ResponseEntity.badRequest().build();
+        }
+        return ResponseEntity.ok("Admin registered successfully");
     }
 
     @PutMapping("/update/{adminID}")
-    public void updateAdmin(@PathVariable int adminID, @RequestBody AdminDTO adminDTO) {
-        adminService.updateAdmin(adminID,adminDTO);
+    public ResponseEntity<String> updateAdmin(@PathVariable int adminID, @RequestBody AdminDTO adminDTO) {
+        AdminDTO updatedAdmin = adminService.updateAdmin(adminID, adminDTO);
+        if (updatedAdmin == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok("Admin updated successfully.");
     }
 
     @PostMapping("/start")
-    public void startSystem(){
+    public ResponseEntity<String> startSystem() {
+        if (systemDTO.isRunning()) {
+            return ResponseEntity.badRequest().build();
+        }
         adminService.startSystem();
+        return ResponseEntity.ok("System started...");
     }
 
     @PostMapping("/stop")
-    public void stopThreads(){
-        vendorService.stopVendorThreads();
-        customerService.stopCustomerThreads();
+    public ResponseEntity<String> stopThreads() {
+        if (systemDTO.isRunning()) {
+            vendorService.stopVendorThreads();
+            customerService.stopCustomerThreads();
+            systemDTO.setRunning(false);
+            return ResponseEntity.ok("System stopped..");
+        }
+        return ResponseEntity.ok("System not running");
     }
 }
 

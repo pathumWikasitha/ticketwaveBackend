@@ -19,6 +19,9 @@ public class TicketController {
     @GetMapping("/all")
     public ResponseEntity<List<TicketDTO>> getAllTickets() {
         List<TicketDTO> tickets = ticketService.getAllTickets();
+        if (tickets.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
         return ResponseEntity.ok(tickets);
     }
 

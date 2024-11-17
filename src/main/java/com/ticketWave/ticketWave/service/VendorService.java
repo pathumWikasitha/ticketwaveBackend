@@ -17,7 +17,6 @@ import java.util.List;
 public class VendorService {
     private final TicketPoolDTO ticketPool;
     private final ConfigurationService configurationService;
-    private final SystemDTO systemDTO;
     private final List<Thread> vendorThreads = new ArrayList<>();
 
     @Autowired
@@ -25,19 +24,18 @@ public class VendorService {
 
     @Autowired
     private ModelMapper modelMapper;
+
     @Autowired
     private TicketService ticketService;
 
 
-    public VendorService(TicketPoolDTO ticketPool, ConfigurationService configurationService, UserRepo userRepo, SystemDTO systemDTO) {
+    public VendorService(TicketPoolDTO ticketPool, ConfigurationService configurationService, UserRepo userRepo) {
         this.userRepo = userRepo;
         this.ticketPool = ticketPool;
         this.configurationService = configurationService;
-        this.systemDTO = systemDTO;
     }
 
     public void releaseTickets(int vendorID, int ticketCount, TicketDTO ticketDTO) {
-        if (systemDTO.isRunning()) {
             Thread vendorThread = new Thread(() -> {
                 int ticketReleaseRate = configurationService.getConfiguration().getTicketReleaseRate();
                 int maxTicketCapacity = configurationService.getConfiguration().getMaxTicketCapacity();
@@ -72,9 +70,6 @@ public class VendorService {
 
             vendorThread.start();
             vendorThreads.add(vendorThread);
-        } else {
-            System.out.println("System not running.");
-        }
     }
 
     public void stopVendorThreads() {
@@ -84,23 +79,26 @@ public class VendorService {
         vendorThreads.clear();
     }
 
-    public UserDTO getVendor(int vendorID) {
+    public VendorDTO getVendor(int vendorID) {
         UserDTO userDTO = modelMapper.map(userRepo.findByUserID(vendorID), UserDTO.class);
         userDTO.setPassword("");
-        return userDTO;
+        return modelMapper.map(userDTO, VendorDTO.class);
     }
 
-    public void registerVendor(VendorDTO vendorDTO) {
+    public VendorDTO registerVendor(VendorDTO vendorDTO) {
         Vendor vendor = modelMapper.map(vendorDTO, Vendor.class);
         userRepo.save(vendor);
+        return modelMapper.map(vendor, VendorDTO.class);
     }
 
-    public void updateVendor(int vendorID, VendorDTO vendorDTO) {
+    public VendorDTO updateVendor(int vendorID, VendorDTO vendorDTO) {
         User user = userRepo.findByUserID(vendorID);
         if (user != null) {
             userRepo.save(modelMapper.map(vendorDTO, Vendor.class));
+            return modelMapper.map(vendorDTO, VendorDTO.class);
         } else {
             System.out.println("Vendor " + vendorID + " not found.");
+            return null;
         }
 
     }

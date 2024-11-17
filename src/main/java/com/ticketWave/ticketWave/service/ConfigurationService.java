@@ -19,8 +19,9 @@ public class ConfigurationService {
         this.modelMapper = modelMapper;
     }
 
-    public void setConfiguration(ConfigurationDTO configuration) {
+    public ConfigurationDTO setConfiguration(ConfigurationDTO configuration) {
         configurationRepo.save(modelMapper.map(configuration, Configuration.class));
+        return modelMapper.map(configuration, ConfigurationDTO.class);
     }
 
 

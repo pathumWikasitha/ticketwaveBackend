@@ -1,10 +1,8 @@
 package com.ticketWave.ticketWave.service;
 
 import com.ticketWave.ticketWave.dto.TicketDTO;
-import com.ticketWave.ticketWave.dto.UserDTO;
 import com.ticketWave.ticketWave.model.Customer;
 import com.ticketWave.ticketWave.model.Ticket;
-import com.ticketWave.ticketWave.model.User;
 import com.ticketWave.ticketWave.model.Vendor;
 import com.ticketWave.ticketWave.repo.TicketRepo;
 import com.ticketWave.ticketWave.repo.UserRepo;

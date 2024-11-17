@@ -20,20 +20,32 @@ public class AdminService {
         this.systemDTO = systemDTO;
     }
 
-    public void updateAdmin(int adminID, AdminDTO adminDTO) {
+    public AdminDTO updateAdmin(int adminID, AdminDTO adminDTO) {
         User user = userRepo.findByUserID(adminID);
         if (user != null) {
-            userRepo.save(modelMapper.map(adminDTO, Admin.class));
+            Admin admin = userRepo.save(modelMapper.map(adminDTO, Admin.class));
+            return modelMapper.map(admin, AdminDTO.class);
         }else {
-            System.out.println("Admin " + adminID + " not found.");
+            return null;
         }
     }
 
-    public void registerAdmin(AdminDTO adminDTO) {
+    public AdminDTO registerAdmin(AdminDTO adminDTO) {
         userRepo.save(modelMapper.map(adminDTO, User.class));
+        return adminDTO;
     }
 
     public void startSystem() {
         systemDTO.setRunning(true);
+    }
+
+    public AdminDTO getAdminByID(int adminID) {
+        User user = userRepo.findByUserID(adminID);
+        if (user != null) {
+            user.setPassword("");
+            return modelMapper.map(user, AdminDTO.class);
+        }else {
+            return null;
+        }
     }
 }
