@@ -1,8 +1,8 @@
 package com.ticketWave.ticketWave.controller;
 
+import com.ticketWave.ticketWave.dto.TicketDTO;
 import com.ticketWave.ticketWave.dto.UserDTO;
 import com.ticketWave.ticketWave.dto.VendorDTO;
-import com.ticketWave.ticketWave.model.Ticket;
 import com.ticketWave.ticketWave.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,8 +34,8 @@ public class VendorController {
         vendorService.updateVendor(vendorID,vendorDTO);
     }
 
-    @PostMapping("/{vendorID}/releaseTickets")
-    public void releaseTickets(@PathVariable int vendorID, @RequestBody Ticket ticket) {
-        vendorService.releaseTickets(vendorID, ticket);
+    @PostMapping("/{vendorID}/releaseTickets/{ticketCount}")
+    public void releaseTickets(@PathVariable int vendorID, @PathVariable int ticketCount,@RequestBody TicketDTO ticket) {
+        vendorService.releaseTickets(vendorID, ticketCount , ticket);
     }
 }

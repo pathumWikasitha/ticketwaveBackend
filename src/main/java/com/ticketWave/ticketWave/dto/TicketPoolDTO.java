@@ -1,6 +1,5 @@
 package com.ticketWave.ticketWave.dto;
 
-import com.ticketWave.ticketWave.model.Ticket;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Component;
@@ -14,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Component
 public class TicketPoolDTO {
-    private final List<Ticket> synTicketList;
+    private final List<TicketDTO> synTicketList;
 
     public TicketPoolDTO() {
         this.synTicketList = Collections.synchronizedList(new ArrayList<>());

@@ -1,9 +1,7 @@
 package com.ticketWave.ticketWave.service;
 
-import com.ticketWave.ticketWave.dto.CustomerDTO;
-import com.ticketWave.ticketWave.dto.UserDTO;
+import com.ticketWave.ticketWave.dto.*;
 import com.ticketWave.ticketWave.model.Customer;
-import com.ticketWave.ticketWave.model.Ticket;
 import com.ticketWave.ticketWave.model.User;
 import com.ticketWave.ticketWave.repo.UserRepo;
 import org.modelmapper.ModelMapper;
@@ -15,14 +13,20 @@ import java.util.List;
 @Service
 public class CustomerService {
     private final UserRepo userRepo;
-    private CustomerRepo customerRepo;
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
+    private final SystemDTO systemDTO;
+    private final TicketPoolDTO ticketPoolDTO;
+    private final ConfigurationService configurationService;
     private final List<Thread> customerThreads = new ArrayList<>();
+    private final TicketService ticketService;
 
-    public CustomerService(ModelMapper modelMapper, CustomerRepo customerRepo, UserRepo userRepo) {
-        this.customerRepo = customerRepo;
+    public CustomerService(ModelMapper modelMapper, UserRepo userRepo, SystemDTO systemDTO, TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService) {
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
+        this.systemDTO = systemDTO;
+        this.ticketPoolDTO = ticketPoolDTO;
+        this.configurationService = configurationService;
+        this.ticketService = ticketService;
     }
 
     public void stopCustomerThreads() {
@@ -40,7 +44,7 @@ public class CustomerService {
 
     public void registerCustomer(CustomerDTO customerDTO) {
         Customer customer = modelMapper.map(customerDTO, Customer.class);
-        customerRepo.save(customer);
+        userRepo.save(customer);
     }
 
     public void updateCustomer(int customerID, CustomerDTO customerDTO) {
@@ -48,9 +52,50 @@ public class CustomerService {
         if (user != null) {
             userRepo.save(modelMapper.map(customerDTO, Customer.class));
         }
-        System.out.println("Customer "+customerID+" not found");
+        System.out.println("Customer " + customerID + " not found");
     }
 
-    public void purchaseTicket(CustomerService customerService, Ticket ticket) {
+    public void purchaseTicket(int customerID, int count) {
+        if (systemDTO.isRunning()) {
+            Thread customerThread = new Thread(() -> {
+                int customerRetrievalRate = configurationService.getConfiguration().getTicketReleaseRate(); // Retrieval rate in milliseconds
+
+                synchronized (ticketPoolDTO) {
+                    int ticketsPurchased = 0; //purchased ticket count
+                    while (ticketsPurchased < count) {
+                        if (ticketPoolDTO.getSynTicketList().size() < (count - ticketsPurchased)) {
+                            System.out.println("Customer " + customerID + " is waiting for tickets to become available.");
+                            try {
+                                ticketPoolDTO.wait(); // Wait for tickets to be added
+                            } catch (InterruptedException e) {
+                                Thread.currentThread().interrupt();
+                                return;
+                            }
+                        } else {
+                            while (ticketsPurchased < count && !ticketPoolDTO.getSynTicketList().isEmpty()) {
+                                try {
+                                    TicketDTO ticketDTO = ticketPoolDTO.getSynTicketList().get(0);
+                                    ticketPoolDTO.getSynTicketList().remove(ticketDTO); // Remove ticket from the pool
+                                    ticketService.saveTicket(customerID,ticketDTO);
+                                    ticketsPurchased++; // Increment the purchased count
+
+                                    Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
+                                    System.out.println("Customer " + customerID + " purchased ticket " + ticketDTO.getId());
+                                } catch (InterruptedException e) {
+                                    Thread.currentThread().interrupt();
+                                    return;
+                                }
+                            }
+                            ticketPoolDTO.notifyAll();
+                        }
+                    }
+                    System.out.println("Customer " + customerID + " successfully purchased all requested tickets.");
+                }
+            });
+            customerThread.start();
+            customerThreads.add(customerThread);
+        } else {
+            System.out.println("System is not running. Cannot process purchase request.");
+        }
     }
 }
