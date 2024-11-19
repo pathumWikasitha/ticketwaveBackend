@@ -36,7 +36,7 @@ public class TicketService {
     }
 
     public void saveTicket(int customerID,TicketDTO ticketDTO) {
-        Customer customer = (Customer) userRepo.findByUserID(customerID);
+        Customer customer = (Customer) userRepo.findUser(customerID,"CUSTOMER");
         if (customer == null) {
             System.out.println("Customer not found");
         }else {
@@ -49,7 +49,7 @@ public class TicketService {
     }
 
     public TicketDTO setVendor(int vendorID, TicketDTO ticketDTO) {
-        Vendor vendor = (Vendor) userRepo.findByUserID(vendorID);
+        Vendor vendor = (Vendor) userRepo.findUser(vendorID,"VENDOR");
         if (vendor == null) {
             System.out.println("Vendor not found");
             return null;

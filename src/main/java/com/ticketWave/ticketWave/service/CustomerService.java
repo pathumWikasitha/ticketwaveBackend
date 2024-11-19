@@ -14,16 +14,14 @@ import java.util.List;
 public class CustomerService {
     private final UserRepo userRepo;
     private final ModelMapper modelMapper;
-    private final SystemDTO systemDTO;
     private final TicketPoolDTO ticketPoolDTO;
     private final ConfigurationService configurationService;
     private final List<Thread> customerThreads = new ArrayList<>();
     private final TicketService ticketService;
 
-    public CustomerService(ModelMapper modelMapper, UserRepo userRepo, SystemDTO systemDTO, TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService) {
+    public CustomerService(ModelMapper modelMapper, UserRepo userRepo,TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService) {
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
-        this.systemDTO = systemDTO;
         this.ticketPoolDTO = ticketPoolDTO;
         this.configurationService = configurationService;
         this.ticketService = ticketService;
@@ -37,19 +35,20 @@ public class CustomerService {
     }
 
     public CustomerDTO getCustomer(int customerID) {
-        UserDTO userDTO = modelMapper.map(userRepo.findByUserID(customerID), UserDTO.class);
+        UserDTO userDTO = modelMapper.map(userRepo.findUser(customerID,"CUSTOMER"), UserDTO.class);
         userDTO.setPassword("");
         return modelMapper.map(userDTO, CustomerDTO.class);
     }
 
     public CustomerDTO registerCustomer(CustomerDTO customerDTO) {
+        customerDTO.setRole("CUSTOMER");
         Customer customer = modelMapper.map(customerDTO, Customer.class);
         userRepo.save(customer);
         return customerDTO;
     }
 
     public CustomerDTO updateCustomer(int customerID, CustomerDTO customerDTO) {
-        User user = userRepo.findByUserID(customerID);
+        User user = userRepo.findUser(customerID,"CUSTOMER");
         if (user != null) {
             userRepo.save(modelMapper.map(customerDTO, Customer.class));
             return modelMapper.map(customerDTO, CustomerDTO.class);

@@ -80,19 +80,20 @@ public class VendorService {
     }
 
     public VendorDTO getVendor(int vendorID) {
-        UserDTO userDTO = modelMapper.map(userRepo.findByUserID(vendorID), UserDTO.class);
+        UserDTO userDTO = modelMapper.map(userRepo.findUser(vendorID,"VENDOR"), UserDTO.class);
         userDTO.setPassword("");
         return modelMapper.map(userDTO, VendorDTO.class);
     }
 
     public VendorDTO registerVendor(VendorDTO vendorDTO) {
+        vendorDTO.setRole("VENDOR");
         Vendor vendor = modelMapper.map(vendorDTO, Vendor.class);
         userRepo.save(vendor);
         return modelMapper.map(vendor, VendorDTO.class);
     }
 
     public VendorDTO updateVendor(int vendorID, VendorDTO vendorDTO) {
-        User user = userRepo.findByUserID(vendorID);
+        User user = userRepo.findUser(vendorID,"VENDOR");
         if (user != null) {
             userRepo.save(modelMapper.map(vendorDTO, Vendor.class));
             return modelMapper.map(vendorDTO, VendorDTO.class);

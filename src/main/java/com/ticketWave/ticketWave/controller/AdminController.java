@@ -40,7 +40,7 @@ public class AdminController {
         return ResponseEntity.ok(configurationDTO);
     }
 
-    @PostMapping("/setConfiguration")
+    @PostMapping("/saveConfiguration")
     public ResponseEntity<String> setConfiguration(@RequestBody ConfigurationDTO configurationDTO) {
         ConfigurationDTO config = configurationService.setConfiguration(configurationDTO);
         if (config == null) {
@@ -60,7 +60,7 @@ public class AdminController {
     public ResponseEntity<AdminDTO> getAdminByID(@PathVariable int adminID) {
         AdminDTO adminDTO = adminService.getAdminByID(adminID);
         if (adminDTO == null) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.status(404).build();
         }
         return ResponseEntity.ok(adminDTO);
     }
@@ -85,7 +85,7 @@ public class AdminController {
 
     @PostMapping("/start")
     public ResponseEntity<String> startSystem() {
-        if (systemDTO.isRunning()) {
+        if (systemDTO.isRunning() && configurationService.getConfiguration() == null) {
             return ResponseEntity.badRequest().build();
         }
         adminService.startSystem();

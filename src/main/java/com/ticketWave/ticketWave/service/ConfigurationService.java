@@ -3,6 +3,7 @@ package com.ticketWave.ticketWave.service;
 import com.ticketWave.ticketWave.dto.ConfigurationDTO;
 import com.ticketWave.ticketWave.model.Configuration;
 import com.ticketWave.ticketWave.repo.ConfigurationRepo;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,17 @@ public class ConfigurationService {
 
 
     public ConfigurationDTO getConfiguration() {
-        return modelMapper.map(configurationRepo.findAll().getLast(), ConfigurationDTO.class);
+        Configuration configuration = null;
+        try {
+            configuration = configurationRepo.findAll().getFirst();
+
+        } catch (Exception e) {
+            System.out.println("Configuration not found");
+        }
+        if (configuration == null) {
+            return null;
+        }
+        return modelMapper.map(configuration, ConfigurationDTO.class);
     }
 
     public void deleteConfiguration() {
