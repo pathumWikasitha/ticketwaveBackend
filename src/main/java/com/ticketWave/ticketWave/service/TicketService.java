@@ -12,6 +12,7 @@ import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -27,19 +28,38 @@ public class TicketService {
     }
 
     public List<TicketDTO> getAllTickets() {
-        List<Ticket> tickets =ticketRepo.findAll();
-        return modelMapper.map(tickets,new TypeToken<List<TicketDTO>>(){}.getType());
+        List<Ticket> tickets;
+        try {
+            tickets = ticketRepo.findAll();
+            if (!tickets.isEmpty()) {
+                return modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
+                }.getType());
+            }
+        } catch (Exception e) {
+            System.out.println("no tickets not released yet");
+        }
+        return null;
+
     }
 
     public TicketDTO getTicketById(int id) {
-        return modelMapper.map(ticketRepo.findById(id),TicketDTO.class);
+        Optional<Ticket> ticket;
+        try {
+            ticket = ticketRepo.findById(id);
+            if (ticket.isPresent()) {
+                return modelMapper.map(ticket, TicketDTO.class);
+            }
+        } catch (Exception e) {
+            System.out.println("Ticket not found");
+        }
+        return null;
     }
 
-    public void saveTicket(int customerID,TicketDTO ticketDTO) {
-        Customer customer = (Customer) userRepo.findUser(customerID,"CUSTOMER");
+    public void saveTicket(int customerID, TicketDTO ticketDTO) {
+        Customer customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
         if (customer == null) {
             System.out.println("Customer not found");
-        }else {
+        } else {
             Ticket ticket = setData(ticketDTO);
             ticket.setVendor(ticketDTO.getVendor());
             ticket.setCustomer(customer);
@@ -49,15 +69,20 @@ public class TicketService {
     }
 
     public TicketDTO setVendor(int vendorID, TicketDTO ticketDTO) {
-        Vendor vendor = (Vendor) userRepo.findUser(vendorID,"VENDOR");
-        if (vendor == null) {
-            System.out.println("Vendor not found");
-            return null;
+        Vendor vendor;
+        try {
+            vendor = (Vendor) userRepo.findUser(vendorID, "VENDOR");
+            if (vendor != null) {
+                Ticket ticket = setData(ticketDTO);
+                ticket.setVendor(vendor);
+                ticket.setCustomer(null);
+                return modelMapper.map(ticket, TicketDTO.class);
+            }
+        }catch (Exception e) {
+            System.out.println("vendor not found");
         }
-        Ticket ticket = setData(ticketDTO);
-        ticket.setVendor(vendor);
-        ticket.setCustomer(null);
-        return modelMapper.map(ticket,TicketDTO.class);
+        return null;
+
     }
 
     private Ticket setData(TicketDTO ticketDTO) {
