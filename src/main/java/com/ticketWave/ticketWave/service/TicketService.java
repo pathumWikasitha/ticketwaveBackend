@@ -32,8 +32,12 @@ public class TicketService {
         try {
             tickets = ticketRepo.findAll();
             if (!tickets.isEmpty()) {
-                return modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
+                List<TicketDTO> ticketDTO = modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
                 }.getType());
+                for (int i = 0; i < ticketDTO.size(); i++) {
+                    ticketDTO.set(i, removeCustomerVendorDetails(ticketDTO.get(i)));
+                }
+                return ticketDTO;
             }
         } catch (Exception e) {
             System.out.println("no tickets not released yet");
@@ -47,12 +51,29 @@ public class TicketService {
         try {
             ticket = ticketRepo.findById(id);
             if (ticket.isPresent()) {
-                return modelMapper.map(ticket, TicketDTO.class);
+                TicketDTO ticketDTO = modelMapper.map(ticket, TicketDTO.class);
+                removeCustomerVendorDetails(ticketDTO);
+                return ticketDTO;
             }
         } catch (Exception e) {
             System.out.println("Ticket not found");
         }
         return null;
+    }
+
+    private TicketDTO removeCustomerVendorDetails(TicketDTO ticketDTO) {
+        Vendor vendor = new Vendor();
+        vendor.setId(ticketDTO.getVendor().getId());
+        vendor.setUsername(ticketDTO.getVendor().getUsername());
+
+        Customer customer = new Customer();
+        customer.setId(ticketDTO.getCustomer().getId());
+        customer.setUsername(ticketDTO.getCustomer().getUsername());
+
+        ticketDTO.setVendor(vendor);
+        ticketDTO.setCustomer(customer);
+
+        return ticketDTO;
     }
 
     public void saveTicket(int customerID, TicketDTO ticketDTO) {

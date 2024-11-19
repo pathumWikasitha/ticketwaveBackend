@@ -5,6 +5,7 @@ import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.model.Admin;
 import com.ticketWave.ticketWave.model.User;
 import com.ticketWave.ticketWave.repo.UserRepo;
+import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ public class AdminService {
     private final ModelMapper modelMapper;
     private final UserRepo userRepo;
     private final SystemDTO systemDTO;
+    private static final Logger logger = Logger.getLogger(AdminService.class);
 
     public AdminService(ModelMapper modelMapper, UserRepo userRepo, SystemDTO systemDTO) {
         this.userRepo = userRepo;
@@ -29,7 +31,7 @@ public class AdminService {
                 return modelMapper.map(admin, AdminDTO.class);
             }
         } catch (Exception e) {
-            System.out.println("Admin " + adminID + " not found");
+            logger.error("Admin " + adminID + " not found");
         }
         return null;
     }
@@ -38,6 +40,7 @@ public class AdminService {
         adminDTO.setRole("ADMIN");
         Admin admin = modelMapper.map(adminDTO, Admin.class);
         userRepo.save(admin);
+        logger.info("Admin " + adminDTO.getId() + " created");
         return adminDTO;
     }
 

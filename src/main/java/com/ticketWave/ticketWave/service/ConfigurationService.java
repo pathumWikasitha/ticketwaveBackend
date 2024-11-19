@@ -1,10 +1,12 @@
 package com.ticketWave.ticketWave.service;
 
+import com.ticketWave.ticketWave.TicketWaveApplication;
 import com.ticketWave.ticketWave.dto.ConfigurationDTO;
 import com.ticketWave.ticketWave.model.Configuration;
 import com.ticketWave.ticketWave.repo.ConfigurationRepo;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class ConfigurationService {
     private final ConfigurationRepo configurationRepo;
     private final ModelMapper modelMapper;
+    private static final Logger logger = LogManager.getLogger(TicketWaveApplication.class);
 
 
     public ConfigurationService(ConfigurationRepo configurationRepo, ModelMapper modelMapper) {
@@ -23,6 +26,7 @@ public class ConfigurationService {
     public ConfigurationDTO setConfiguration(ConfigurationDTO configuration) {
         configurationRepo.deleteAll();
         configurationRepo.save(modelMapper.map(configuration, Configuration.class));
+        logger.info("Configuration saved");
         return modelMapper.map(configuration, ConfigurationDTO.class);
     }
 
