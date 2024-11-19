@@ -1,7 +1,7 @@
 package com.ticketWave.ticketWave.controller;
 
+import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.dto.TicketDTO;
-import com.ticketWave.ticketWave.dto.UserDTO;
 import com.ticketWave.ticketWave.dto.VendorDTO;
 import com.ticketWave.ticketWave.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +15,9 @@ public class VendorController {
 
     @Autowired
     private VendorService vendorService;
+
+    @Autowired
+    private SystemDTO systemDTO;
 
     @GetMapping("/{vendorID}")
     public ResponseEntity<VendorDTO> getVendor(@PathVariable int vendorID) {
@@ -36,7 +39,7 @@ public class VendorController {
 
     @PutMapping("/update/{vendorID}")
     public ResponseEntity<String> updateVendor(@PathVariable int vendorID, @RequestBody VendorDTO vendorDTO) {
-        VendorDTO vendor  = vendorService.updateVendor(vendorID,vendorDTO);
+        VendorDTO vendor = vendorService.updateVendor(vendorID, vendorDTO);
         if (vendor == null) {
             return ResponseEntity.notFound().build();
         }
@@ -44,8 +47,11 @@ public class VendorController {
     }
 
     @PostMapping("/{vendorID}/releaseTickets/{ticketCount}")
-    public ResponseEntity<String> releaseTickets(@PathVariable int vendorID, @PathVariable int ticketCount,@RequestBody TicketDTO ticket) {
-        vendorService.releaseTickets(vendorID, ticketCount , ticket);
-        return ResponseEntity.accepted().build();
+    public ResponseEntity<String> releaseTickets(@PathVariable int vendorID, @PathVariable int ticketCount, @RequestBody TicketDTO ticket) {
+        if (systemDTO.isRunning()) {
+            vendorService.releaseTickets(vendorID, ticketCount, ticket);
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.badRequest().body("System is not running");
     }
 }

@@ -3,7 +3,6 @@ package com.ticketWave.ticketWave.service;
 import com.ticketWave.ticketWave.dto.AdminDTO;
 import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.model.Admin;
-import com.ticketWave.ticketWave.model.Customer;
 import com.ticketWave.ticketWave.model.User;
 import com.ticketWave.ticketWave.repo.UserRepo;
 import org.modelmapper.ModelMapper;

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 @Transactional
@@ -36,28 +37,43 @@ public class VendorService {
     }
 
     public void releaseTickets(int vendorID, int ticketCount, TicketDTO ticketDTO) {
+
         Thread vendorThread = new Thread(() -> {
             int ticketReleaseRate = configurationService.getConfiguration().getTicketReleaseRate();
             int maxTicketCapacity = configurationService.getConfiguration().getMaxTicketCapacity();
+            int totalTickets = configurationService.getConfiguration().getTotalTickets();
 
             while (!Thread.currentThread().isInterrupted()) {
                 synchronized (ticketPool) {
                     try {
-
                         while (true) {
-                            if (ticketPool.getSynTicketList().size() + ticketCount > maxTicketCapacity) {
-                                wait(); // Wait if the pool is full
-                            } else {
-                                for (int i = 0; i < ticketCount; i++) {
-                                    TicketDTO ticket = ticketService.setVendor(vendorID, ticketDTO);
-                                    ticketPool.getSynTicketList().add(ticket);
-                                    Thread.sleep(ticketReleaseRate);
+                            if (ticketCount <= maxTicketCapacity) {
+                                if (totalTickets - ticketCount >= 0) {
+                                    if (ticketPool.getSynTicketList().size() + ticketCount > maxTicketCapacity) {
+                                        wait(); // Wait if the pool is full
+                                    } else {
+                                        for (int i = 0; i < ticketCount; i++) {
+                                            TicketDTO ticket = ticketService.setVendor(vendorID, ticketDTO);
+                                            ticketPool.getSynTicketList().add(ticket);
+                                            Thread.sleep(ticketReleaseRate);
+                                        }
+                                        System.out.println("Vendor " + vendorID + " released " + ticketCount + " tickets");
+                                        vendorThreads.remove(Thread.currentThread());
+                                        Thread.currentThread().interrupt();
+                                        ticketPool.notifyAll();
+                                        break;
+                                    }
+                                } else {
+                                    System.out.println("No more tickets available");
+                                    Thread.currentThread().interrupt();
+                                    break;
                                 }
-                                System.out.println("Vendor " + vendorID + " released " + ticketCount + " tickets");
+                            } else {
+                                System.out.println("Trying to release tickets more than ticket pool capacity");
                                 Thread.currentThread().interrupt();
-                                ticketPool.notifyAll();
                                 break;
                             }
+
                         }
 
                     } catch (InterruptedException e) {

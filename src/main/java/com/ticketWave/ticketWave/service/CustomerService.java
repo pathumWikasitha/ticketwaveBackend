@@ -73,11 +73,13 @@ public class CustomerService {
 
     public void purchaseTicket(int customerID, int count) {
         Thread customerThread = new Thread(() -> {
-            int customerRetrievalRate = configurationService.getConfiguration().getTicketReleaseRate(); // Retrieval rate in milliseconds
+            ConfigurationDTO configurationDTO = configurationService.getConfiguration();
+            int customerRetrievalRate = configurationDTO.getTicketReleaseRate(); // Retrieval rate in milliseconds
+            int totalTickets = configurationDTO.getTotalTickets();
 
             synchronized (ticketPoolDTO) {
                 int ticketsPurchased = 0; //purchased ticket count
-                while (ticketsPurchased < count) {
+                while (ticketsPurchased < count && !Thread.interrupted()) {
                     if (ticketPoolDTO.getSynTicketList().size() < (count - ticketsPurchased)) {
                         System.out.println("Customer " + customerID + " is waiting for tickets to become available.");
                         try {
@@ -94,7 +96,7 @@ public class CustomerService {
                                 ticketService.saveTicket(customerID, ticketDTO);
                                 ticketsPurchased++; // Increment the purchased count
 
-                                System.out.println("Customer " + customerID + " purchased a ticket.");
+                                System.out.println("Customer" + customerID + " purchased a ticket.");
                                 Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
                             } catch (InterruptedException e) {
                                 Thread.currentThread().interrupt();
@@ -106,6 +108,10 @@ public class CustomerService {
                 }
                 System.out.println("Customer " + customerID + " successfully purchased all requested tickets.");
                 customerThreads.remove(Thread.currentThread());
+                configurationDTO.setTotalTickets(totalTickets - ticketsPurchased);
+                configurationService.setConfiguration(configurationDTO);
+                Thread.currentThread().interrupt();
+
             }
         });
         customerThread.start();

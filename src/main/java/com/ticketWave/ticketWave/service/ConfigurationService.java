@@ -21,6 +21,7 @@ public class ConfigurationService {
     }
 
     public ConfigurationDTO setConfiguration(ConfigurationDTO configuration) {
+        configurationRepo.deleteAll();
         configurationRepo.save(modelMapper.map(configuration, Configuration.class));
         return modelMapper.map(configuration, ConfigurationDTO.class);
     }
