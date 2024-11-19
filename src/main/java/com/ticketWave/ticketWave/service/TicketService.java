@@ -56,15 +56,18 @@ public class TicketService {
     }
 
     public void saveTicket(int customerID, TicketDTO ticketDTO) {
-        Customer customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
-        if (customer == null) {
+        Customer customer;
+        try {
+            customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
+            if (customer != null) {
+                Ticket ticket = setData(ticketDTO);
+                ticket.setVendor(ticketDTO.getVendor());
+                ticket.setCustomer(customer);
+                ticketRepo.save(ticket);
+                System.out.println("Ticket saved");
+            }
+        } catch (Exception e) {
             System.out.println("Customer not found");
-        } else {
-            Ticket ticket = setData(ticketDTO);
-            ticket.setVendor(ticketDTO.getVendor());
-            ticket.setCustomer(customer);
-            ticketRepo.save(ticket);
-            System.out.println("Ticket saved");
         }
     }
 
@@ -78,7 +81,7 @@ public class TicketService {
                 ticket.setCustomer(null);
                 return modelMapper.map(ticket, TicketDTO.class);
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("vendor not found");
         }
         return null;

@@ -27,17 +27,18 @@ public class ConfigurationService {
 
 
     public ConfigurationDTO getConfiguration() {
-        Configuration configuration = null;
+        Configuration configuration;
         try {
             configuration = configurationRepo.findAll().getFirst();
+            if (configuration != null) {
+                return modelMapper.map(configuration, ConfigurationDTO.class);
+            }
 
         } catch (Exception e) {
             System.out.println("Configuration not found");
         }
-        if (configuration == null) {
-            return null;
-        }
-        return modelMapper.map(configuration, ConfigurationDTO.class);
+        return null;
+
     }
 
     public void deleteConfiguration() {

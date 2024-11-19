@@ -15,20 +15,24 @@ public class AdminService {
     private final UserRepo userRepo;
     private final SystemDTO systemDTO;
 
-    public AdminService(ModelMapper modelMapper, UserRepo userRepo,SystemDTO systemDTO) {
+    public AdminService(ModelMapper modelMapper, UserRepo userRepo, SystemDTO systemDTO) {
         this.userRepo = userRepo;
         this.modelMapper = modelMapper;
         this.systemDTO = systemDTO;
     }
 
     public AdminDTO updateAdmin(int adminID, AdminDTO adminDTO) {
-        User user = userRepo.findUser(adminID,"ADMIN");
-        if (user != null) {
-            Admin admin = userRepo.save(modelMapper.map(adminDTO, Admin.class));
-            return modelMapper.map(admin, AdminDTO.class);
-        }else {
-            return null;
+        User user;
+        try {
+            user = userRepo.findUser(adminID, "ADMIN");
+            if (user != null) {
+                Admin admin = userRepo.save(modelMapper.map(adminDTO, Admin.class));
+                return modelMapper.map(admin, AdminDTO.class);
+            }
+        } catch (Exception e) {
+            System.out.println("Admin " + adminID + " not found");
         }
+        return null;
     }
 
     public AdminDTO registerAdmin(AdminDTO adminDTO) {
@@ -43,12 +47,16 @@ public class AdminService {
     }
 
     public AdminDTO getAdminByID(int adminID) {
-        User user = userRepo.findUser(adminID,"ADMIN");
-        if (user != null) {
-            user.setPassword("");
-            return modelMapper.map(user, AdminDTO.class);
-        }else {
-            return null;
+        User user;
+        try {
+            user = userRepo.findUser(adminID, "ADMIN");
+            if (user != null) {
+                user.setPassword("");
+                return modelMapper.map(user, AdminDTO.class);
+            }
+        } catch (Exception e) {
+            System.out.println("Admin " + adminID + " not found");
         }
+        return null;
     }
 }

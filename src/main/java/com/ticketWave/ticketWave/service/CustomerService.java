@@ -19,7 +19,7 @@ public class CustomerService {
     private final List<Thread> customerThreads = new ArrayList<>();
     private final TicketService ticketService;
 
-    public CustomerService(ModelMapper modelMapper, UserRepo userRepo,TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService) {
+    public CustomerService(ModelMapper modelMapper, UserRepo userRepo, TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService) {
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
         this.ticketPoolDTO = ticketPoolDTO;
@@ -35,9 +35,18 @@ public class CustomerService {
     }
 
     public CustomerDTO getCustomer(int customerID) {
-        UserDTO userDTO = modelMapper.map(userRepo.findUser(customerID,"CUSTOMER"), UserDTO.class);
-        userDTO.setPassword("");
-        return modelMapper.map(userDTO, CustomerDTO.class);
+        User user;
+        try {
+            user = userRepo.findUser(customerID, "CUSTOMER");
+            if (user != null) {
+                CustomerDTO customerDTO = modelMapper.map(user, CustomerDTO.class);
+                customerDTO.setPassword("");
+                return customerDTO;
+            }
+        } catch (Exception e) {
+            System.out.println("Customer not found");
+        }
+        return null;
     }
 
     public CustomerDTO registerCustomer(CustomerDTO customerDTO) {
@@ -48,12 +57,17 @@ public class CustomerService {
     }
 
     public CustomerDTO updateCustomer(int customerID, CustomerDTO customerDTO) {
-        User user = userRepo.findUser(customerID,"CUSTOMER");
-        if (user != null) {
-            userRepo.save(modelMapper.map(customerDTO, Customer.class));
-            return modelMapper.map(customerDTO, CustomerDTO.class);
+        User user;
+        try {
+            user = userRepo.findUser(customerID, "CUSTOMER");
+            if (user != null) {
+                userRepo.save(modelMapper.map(customerDTO, Customer.class));
+                return modelMapper.map(customerDTO, CustomerDTO.class);
+            }
+        } catch (Exception e) {
+            System.out.println("Customer not found");
+
         }
-        System.out.println("Customer " + customerID + " not found");
         return null;
     }
 

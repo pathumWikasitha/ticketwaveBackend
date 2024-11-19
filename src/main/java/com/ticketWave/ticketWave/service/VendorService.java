@@ -36,40 +36,40 @@ public class VendorService {
     }
 
     public void releaseTickets(int vendorID, int ticketCount, TicketDTO ticketDTO) {
-            Thread vendorThread = new Thread(() -> {
-                int ticketReleaseRate = configurationService.getConfiguration().getTicketReleaseRate();
-                int maxTicketCapacity = configurationService.getConfiguration().getMaxTicketCapacity();
+        Thread vendorThread = new Thread(() -> {
+            int ticketReleaseRate = configurationService.getConfiguration().getTicketReleaseRate();
+            int maxTicketCapacity = configurationService.getConfiguration().getMaxTicketCapacity();
 
-                while (!Thread.currentThread().isInterrupted()) {
-                    synchronized (ticketPool) {
-                        try {
+            while (!Thread.currentThread().isInterrupted()) {
+                synchronized (ticketPool) {
+                    try {
 
-                            while (true) {
-                                if (ticketPool.getSynTicketList().size() + ticketCount > maxTicketCapacity) {
-                                    wait(); // Wait if the pool is full
-                                } else {
-                                    for (int i = 0; i < ticketCount; i++) {
-                                        TicketDTO ticket = ticketService.setVendor(vendorID,ticketDTO);
-                                        ticketPool.getSynTicketList().add(ticket);
-                                        Thread.sleep(ticketReleaseRate);
-                                    }
-                                    System.out.println("Vendor " + vendorID + " released " + ticketCount + " tickets");
-                                    Thread.currentThread().interrupt();
-                                    ticketPool.notifyAll();
-                                    break;
+                        while (true) {
+                            if (ticketPool.getSynTicketList().size() + ticketCount > maxTicketCapacity) {
+                                wait(); // Wait if the pool is full
+                            } else {
+                                for (int i = 0; i < ticketCount; i++) {
+                                    TicketDTO ticket = ticketService.setVendor(vendorID, ticketDTO);
+                                    ticketPool.getSynTicketList().add(ticket);
+                                    Thread.sleep(ticketReleaseRate);
                                 }
+                                System.out.println("Vendor " + vendorID + " released " + ticketCount + " tickets");
+                                Thread.currentThread().interrupt();
+                                ticketPool.notifyAll();
+                                break;
                             }
-
-                        } catch (InterruptedException e) {
-                            System.out.println("Vendor " + vendorID + " interrupted.");
-                            Thread.currentThread().interrupt();
                         }
+
+                    } catch (InterruptedException e) {
+                        System.out.println("Vendor " + vendorID + " interrupted.");
+                        Thread.currentThread().interrupt();
                     }
                 }
-            });
+            }
+        });
 
-            vendorThread.start();
-            vendorThreads.add(vendorThread);
+        vendorThread.start();
+        vendorThreads.add(vendorThread);
     }
 
     public void stopVendorThreads() {
@@ -80,9 +80,18 @@ public class VendorService {
     }
 
     public VendorDTO getVendor(int vendorID) {
-        UserDTO userDTO = modelMapper.map(userRepo.findUser(vendorID,"VENDOR"), UserDTO.class);
-        userDTO.setPassword("");
-        return modelMapper.map(userDTO, VendorDTO.class);
+        User user;
+        try {
+            user = userRepo.findUser(vendorID, "VENDOR");
+            if (user != null) {
+                VendorDTO vendorDTO = modelMapper.map(user, VendorDTO.class);
+                vendorDTO.setPassword("");
+                return vendorDTO;
+            }
+        } catch (Exception e) {
+            System.out.println("Vendor " + vendorID + " not found.");
+        }
+        return null;
     }
 
     public VendorDTO registerVendor(VendorDTO vendorDTO) {
@@ -93,14 +102,17 @@ public class VendorService {
     }
 
     public VendorDTO updateVendor(int vendorID, VendorDTO vendorDTO) {
-        User user = userRepo.findUser(vendorID,"VENDOR");
-        if (user != null) {
-            userRepo.save(modelMapper.map(vendorDTO, Vendor.class));
-            return modelMapper.map(vendorDTO, VendorDTO.class);
-        } else {
+        User user;
+        try {
+            user = userRepo.findUser(vendorID, "VENDOR");
+            if (user != null) {
+                userRepo.save(modelMapper.map(vendorDTO, Vendor.class));
+                return modelMapper.map(vendorDTO, VendorDTO.class);
+            }
+        } catch (Exception e) {
             System.out.println("Vendor " + vendorID + " not found.");
-            return null;
         }
+        return null;
 
     }
 }
