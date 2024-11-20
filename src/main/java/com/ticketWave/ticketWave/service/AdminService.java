@@ -28,10 +28,11 @@ public class AdminService {
             user = userRepo.findUser(Math.toIntExact(adminDTO.getId()), "ADMIN");
             if (user != null) {
                 Admin admin = userRepo.save(modelMapper.map(adminDTO, Admin.class));
+                logger.info("Admin"+adminDTO.getId()+" updated successfully");
                 return modelMapper.map(admin, AdminDTO.class);
             }
         } catch (Exception e) {
-            logger.error("Admin " + adminDTO.getId() + " not found");
+            logger.error("Admin" + adminDTO.getId() + " not found");
         }
         return null;
     }
@@ -40,12 +41,13 @@ public class AdminService {
         adminDTO.setRole("ADMIN");
         Admin admin = modelMapper.map(adminDTO, Admin.class);
         userRepo.save(admin);
-        logger.info("Admin " + adminDTO.getId() + " created");
+        logger.info("Admin " + adminDTO.getId() + " created successfully");
         return adminDTO;
     }
 
     public void startSystem() {
         systemDTO.setRunning(true);
+        logger.info("System started successfully");
     }
 
     public AdminDTO getAdminByID(int adminID) {
@@ -54,10 +56,11 @@ public class AdminService {
             user = userRepo.findUser(adminID, "ADMIN");
             if (user != null) {
                 user.setPassword("");
+                logger.info("Get admin" + adminID + " successfully");
                 return modelMapper.map(user, AdminDTO.class);
             }
         } catch (Exception e) {
-            System.out.println("Admin " + adminID + " not found");
+            logger.error("Get admin" + adminID + " not found");
         }
         return null;
     }

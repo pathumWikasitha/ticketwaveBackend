@@ -5,6 +5,7 @@ import com.ticketWave.ticketWave.model.User;
 import com.ticketWave.ticketWave.model.Vendor;
 import com.ticketWave.ticketWave.repo.UserRepo;
 import jakarta.transaction.Transactional;
+import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class VendorService {
     private final TicketPoolDTO ticketPool;
     private final ConfigurationService configurationService;
     private final List<Thread> vendorThreads = new ArrayList<>();
+    private static final Logger logger = Logger.getLogger(VendorService.class);
 
     @Autowired
     private UserRepo userRepo;
@@ -50,6 +52,7 @@ public class VendorService {
                             if (ticketCount <= maxTicketCapacity) {
                                 if (totalTickets - ticketCount >= 0) {
                                     if (ticketPool.getSynTicketList().size() + ticketCount > maxTicketCapacity) {
+                                        logger.info("Vendor waiting pool becomes available");
                                         wait(); // Wait if the pool is full
                                     } else {
                                         for (int i = 0; i < ticketCount; i++) {
@@ -57,19 +60,19 @@ public class VendorService {
                                             ticketPool.getSynTicketList().add(ticket);
                                             Thread.sleep(ticketReleaseRate);
                                         }
-                                        System.out.println("Vendor " + vendorID + " released " + ticketCount + " tickets");
+                                        logger.info("Vendor " + vendorID + " released " + ticketCount + " tickets");
                                         vendorThreads.remove(Thread.currentThread());
                                         Thread.currentThread().interrupt();
                                         ticketPool.notifyAll();
                                         break;
                                     }
                                 } else {
-                                    System.out.println("No more tickets available");
+                                    logger.error("No more tickets available to release");
                                     Thread.currentThread().interrupt();
                                     break;
                                 }
                             } else {
-                                System.out.println("Trying to release tickets more than ticket pool capacity");
+                                logger.error("Trying to release tickets more than ticket pool capacity");
                                 Thread.currentThread().interrupt();
                                 break;
                             }
@@ -77,7 +80,7 @@ public class VendorService {
                         }
 
                     } catch (InterruptedException e) {
-                        System.out.println("Vendor " + vendorID + " interrupted.");
+                        logger.error("Vendor " + vendorID + " interrupted.");
                         Thread.currentThread().interrupt();
                     }
                 }
@@ -93,6 +96,7 @@ public class VendorService {
             thread.interrupt();
         }
         vendorThreads.clear();
+        logger.info("Vendor threads stopped");
     }
 
     public VendorDTO getVendor(int vendorID) {
@@ -102,10 +106,11 @@ public class VendorService {
             if (user != null) {
                 VendorDTO vendorDTO = modelMapper.map(user, VendorDTO.class);
                 vendorDTO.setPassword("");
+                logger.info("Vendor" + vendorID + " found");
                 return vendorDTO;
             }
         } catch (Exception e) {
-            System.out.println("Vendor " + vendorID + " not found.");
+            logger.error("Vendor " + vendorID + " not found.");
         }
         return null;
     }
@@ -114,6 +119,7 @@ public class VendorService {
         vendorDTO.setRole("VENDOR");
         Vendor vendor = modelMapper.map(vendorDTO, Vendor.class);
         userRepo.save(vendor);
+        logger.info("Vendor " + vendorDTO.getId() + " registered successfully");
         return modelMapper.map(vendor, VendorDTO.class);
     }
 
@@ -123,10 +129,11 @@ public class VendorService {
             user = userRepo.findUser(Math.toIntExact(vendorDTO.getId()), "VENDOR");
             if (user != null) {
                 userRepo.save(modelMapper.map(vendorDTO, Vendor.class));
+                logger.info("Vendor" + vendorDTO.getId() + " updated successfully");
                 return modelMapper.map(vendorDTO, VendorDTO.class);
             }
         } catch (Exception e) {
-            System.out.println("Vendor " + vendorDTO.getId() + " not found.");
+            logger.error("Vendor " + vendorDTO.getId() + " not found.");
         }
         return null;
 

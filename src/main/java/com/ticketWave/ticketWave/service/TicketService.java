@@ -7,6 +7,8 @@ import com.ticketWave.ticketWave.model.Vendor;
 import com.ticketWave.ticketWave.repo.TicketRepo;
 import com.ticketWave.ticketWave.repo.UserRepo;
 import jakarta.transaction.Transactional;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,7 @@ public class TicketService {
     private final TicketRepo ticketRepo;
     private final ModelMapper modelMapper;
     private final UserRepo userRepo;
+    private static final Logger logger = LogManager.getLogger(TicketService.class);
 
     public TicketService(ModelMapper modelMapper, TicketRepo ticketRepo, UserRepo userRepo) {
         this.ticketRepo = ticketRepo;
@@ -32,15 +35,16 @@ public class TicketService {
         try {
             tickets = ticketRepo.findAll();
             if (!tickets.isEmpty()) {
-                List<TicketDTO> ticketDTO = modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
+                List<TicketDTO> ticketList = modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
                 }.getType());
-                for (int i = 0; i < ticketDTO.size(); i++) {
-                    ticketDTO.set(i, removeCustomerVendorDetails(ticketDTO.get(i)));
+                for (int i = 0; i < ticketList.size(); i++) {
+                    ticketList.set(i, removeCustomerVendorDetails(ticketList.get(i)));
                 }
-                return ticketDTO;
+                logger.info("Get all tickets successful");
+                return ticketList;
             }
         } catch (Exception e) {
-            System.out.println("no tickets not released yet");
+            logger.error("tickets not released yet");
         }
         return null;
 
@@ -56,12 +60,12 @@ public class TicketService {
                 return ticketDTO;
             }
         } catch (Exception e) {
-            System.out.println("Ticket not found");
+            logger.info("Ticket"+id+" not found");
         }
         return null;
     }
 
-    private TicketDTO removeCustomerVendorDetails(TicketDTO ticketDTO) {
+    private TicketDTO removeCustomerVendorDetails(TicketDTO ticketDTO) { //for security removing password from dto
         Vendor vendor = new Vendor();
         vendor.setId(ticketDTO.getVendor().getId());
         vendor.setUsername(ticketDTO.getVendor().getUsername());
@@ -85,10 +89,10 @@ public class TicketService {
                 ticket.setVendor(ticketDTO.getVendor());
                 ticket.setCustomer(customer);
                 ticketRepo.save(ticket);
-                System.out.println("Ticket saved");
+                logger.info("Ticket save successful");
             }
         } catch (Exception e) {
-            System.out.println("Customer not found");
+            logger.info("Customer"+customerID+" not found");
         }
     }
 
@@ -100,10 +104,11 @@ public class TicketService {
                 Ticket ticket = setData(ticketDTO);
                 ticket.setVendor(vendor);
                 ticket.setCustomer(null);
+                logger.info("Vendor set successful");
                 return modelMapper.map(ticket, TicketDTO.class);
             }
         } catch (Exception e) {
-            System.out.println("vendor not found");
+            logger.error("Vendor"+vendorID+" not found");
         }
         return null;
 

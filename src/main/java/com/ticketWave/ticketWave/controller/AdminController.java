@@ -60,7 +60,7 @@ public class AdminController {
     public ResponseEntity<AdminDTO> getAdminByID(@PathVariable int adminID) {
         AdminDTO adminDTO = adminService.getAdminByID(adminID);
         if (adminDTO == null) {
-            return ResponseEntity.status(404).build();
+            return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(adminDTO);
     }

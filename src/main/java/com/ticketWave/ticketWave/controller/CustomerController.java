@@ -52,8 +52,7 @@ public class CustomerController {
             customerService.purchaseTicket(customerID, count);
             return ResponseEntity.accepted().build();
         } else {
-            System.out.println("System is not running");
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body("System is not running");
         }
     }
 }

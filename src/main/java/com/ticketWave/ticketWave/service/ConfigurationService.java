@@ -1,7 +1,7 @@
 package com.ticketWave.ticketWave.service;
 
-import com.ticketWave.ticketWave.TicketWaveApplication;
 import com.ticketWave.ticketWave.dto.ConfigurationDTO;
+import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.model.Configuration;
 import com.ticketWave.ticketWave.repo.ConfigurationRepo;
 import jakarta.transaction.Transactional;
@@ -15,12 +15,14 @@ import org.springframework.stereotype.Service;
 public class ConfigurationService {
     private final ConfigurationRepo configurationRepo;
     private final ModelMapper modelMapper;
-    private static final Logger logger = LogManager.getLogger(TicketWaveApplication.class);
+    private final SystemDTO systemDTO;
+    private static final Logger logger = LogManager.getLogger(ConfigurationService.class);
 
 
-    public ConfigurationService(ConfigurationRepo configurationRepo, ModelMapper modelMapper) {
+    public ConfigurationService(ConfigurationRepo configurationRepo, ModelMapper modelMapper, SystemDTO systemDTO) {
         this.configurationRepo = configurationRepo;
         this.modelMapper = modelMapper;
+        this.systemDTO = systemDTO;
     }
 
     public ConfigurationDTO setConfiguration(ConfigurationDTO configuration) {
@@ -36,11 +38,12 @@ public class ConfigurationService {
         try {
             configuration = configurationRepo.findAll().getFirst();
             if (configuration != null) {
+                logger.info("Configuration found");
                 return modelMapper.map(configuration, ConfigurationDTO.class);
             }
 
         } catch (Exception e) {
-            System.out.println("Configuration not found");
+            logger.error("Configuration not found");
         }
         return null;
 
@@ -48,6 +51,8 @@ public class ConfigurationService {
 
     public void deleteConfiguration() {
         configurationRepo.deleteAll();
+        systemDTO.setRunning(Boolean.FALSE);
+        logger.info("Configuration deleted.");
     }
 
 
