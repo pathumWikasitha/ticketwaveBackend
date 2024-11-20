@@ -2,7 +2,6 @@ package com.ticketWave.ticketWave.controller;
 
 import com.ticketWave.ticketWave.dto.CustomerDTO;
 import com.ticketWave.ticketWave.dto.SystemDTO;
-import com.ticketWave.ticketWave.dto.UserDTO;
 import com.ticketWave.ticketWave.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -37,9 +36,9 @@ public class CustomerController {
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/update/{customerID}")
-    public ResponseEntity<String> updateCustomer(@PathVariable int customerID, @RequestBody CustomerDTO customerDTO) {
-        CustomerDTO updatedCustomer = customerService.updateCustomer(customerID, customerDTO);
+    @PutMapping("/update")
+    public ResponseEntity<String> updateCustomer(@RequestBody CustomerDTO customerDTO) {
+        CustomerDTO updatedCustomer = customerService.updateCustomer(customerDTO);
         if (updatedCustomer != null) {
             return ResponseEntity.ok("Customer has been updated");
         } else {

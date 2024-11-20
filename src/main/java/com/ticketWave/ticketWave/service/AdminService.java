@@ -22,16 +22,16 @@ public class AdminService {
         this.systemDTO = systemDTO;
     }
 
-    public AdminDTO updateAdmin(int adminID, AdminDTO adminDTO) {
+    public AdminDTO updateAdmin(AdminDTO adminDTO) {
         User user;
         try {
-            user = userRepo.findUser(adminID, "ADMIN");
+            user = userRepo.findUser(Math.toIntExact(adminDTO.getId()), "ADMIN");
             if (user != null) {
                 Admin admin = userRepo.save(modelMapper.map(adminDTO, Admin.class));
                 return modelMapper.map(admin, AdminDTO.class);
             }
         } catch (Exception e) {
-            logger.error("Admin " + adminID + " not found");
+            logger.error("Admin " + adminDTO.getId() + " not found");
         }
         return null;
     }

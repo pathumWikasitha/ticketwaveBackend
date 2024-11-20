@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
+
 
 @Service
 @Transactional
@@ -117,16 +117,16 @@ public class VendorService {
         return modelMapper.map(vendor, VendorDTO.class);
     }
 
-    public VendorDTO updateVendor(int vendorID, VendorDTO vendorDTO) {
+    public VendorDTO updateVendor(VendorDTO vendorDTO) {
         User user;
         try {
-            user = userRepo.findUser(vendorID, "VENDOR");
+            user = userRepo.findUser(Math.toIntExact(vendorDTO.getId()), "VENDOR");
             if (user != null) {
                 userRepo.save(modelMapper.map(vendorDTO, Vendor.class));
                 return modelMapper.map(vendorDTO, VendorDTO.class);
             }
         } catch (Exception e) {
-            System.out.println("Vendor " + vendorID + " not found.");
+            System.out.println("Vendor " + vendorDTO.getId() + " not found.");
         }
         return null;
 

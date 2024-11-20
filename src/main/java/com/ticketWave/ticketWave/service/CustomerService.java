@@ -56,13 +56,13 @@ public class CustomerService {
         return customerDTO;
     }
 
-    public CustomerDTO updateCustomer(int customerID, CustomerDTO customerDTO) {
+    public CustomerDTO updateCustomer(CustomerDTO customerDTO) {
         User user;
         try {
-            user = userRepo.findUser(customerID, "CUSTOMER");
+            user = userRepo.findUser(Math.toIntExact(customerDTO.getId()), "CUSTOMER");
             if (user != null) {
-                userRepo.save(modelMapper.map(customerDTO, Customer.class));
-                return modelMapper.map(customerDTO, CustomerDTO.class);
+                Customer customer = userRepo.save(modelMapper.map(customerDTO, Customer.class));
+                return modelMapper.map(customer, CustomerDTO.class);
             }
         } catch (Exception e) {
             System.out.println("Customer not found");
@@ -96,7 +96,10 @@ public class CustomerService {
                                 ticketService.saveTicket(customerID, ticketDTO);
                                 ticketsPurchased++; // Increment the purchased count
 
+                                configurationDTO.setTotalTickets(totalTickets - 1);
+                                configurationService.setConfiguration(configurationDTO); //save configuration when customer purchase a ticket
                                 System.out.println("Customer" + customerID + " purchased a ticket.");
+
                                 Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
                             } catch (InterruptedException e) {
                                 Thread.currentThread().interrupt();
@@ -108,8 +111,6 @@ public class CustomerService {
                 }
                 System.out.println("Customer " + customerID + " successfully purchased all requested tickets.");
                 customerThreads.remove(Thread.currentThread());
-                configurationDTO.setTotalTickets(totalTickets - ticketsPurchased);
-                configurationService.setConfiguration(configurationDTO);
                 Thread.currentThread().interrupt();
 
             }

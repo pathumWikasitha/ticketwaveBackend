@@ -74,9 +74,9 @@ public class AdminController {
         return ResponseEntity.ok("Admin registered successfully");
     }
 
-    @PutMapping("/update/{adminID}")
-    public ResponseEntity<String> updateAdmin(@PathVariable int adminID, @RequestBody AdminDTO adminDTO) {
-        AdminDTO updatedAdmin = adminService.updateAdmin(adminID, adminDTO);
+    @PutMapping("/update")
+    public ResponseEntity<String> updateAdmin(@RequestBody AdminDTO adminDTO) {
+        AdminDTO updatedAdmin = adminService.updateAdmin(adminDTO);
         if (updatedAdmin == null) {
             return ResponseEntity.notFound().build();
         }

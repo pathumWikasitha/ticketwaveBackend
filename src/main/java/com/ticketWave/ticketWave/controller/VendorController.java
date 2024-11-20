@@ -37,9 +37,9 @@ public class VendorController {
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/update/{vendorID}")
-    public ResponseEntity<String> updateVendor(@PathVariable int vendorID, @RequestBody VendorDTO vendorDTO) {
-        VendorDTO vendor = vendorService.updateVendor(vendorID, vendorDTO);
+    @PutMapping("/update")
+    public ResponseEntity<String> updateVendor(@RequestBody VendorDTO vendorDTO) {
+        VendorDTO vendor = vendorService.updateVendor(vendorDTO);
         if (vendor == null) {
             return ResponseEntity.notFound().build();
         }
