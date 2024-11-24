@@ -139,3 +139,266 @@
 2024-11-24 19:50:06,636 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
 2024-11-24 19:53:07,513 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
 2024-11-24 19:53:42,419 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 19:55:11,787 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 19:55:23,568 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 19:57:27,238 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event created successfully
+2024-11-24 19:57:42,077 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event created successfully
+2024-11-24 19:58:21,294 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event created successfully
+2024-11-24 19:58:28,300 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 19:59:12,303 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 19:59:31,248 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 19:59:31,317 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 20:06:40,094 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 20:07:02,108 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer registered successfully
+2024-11-24 20:07:36,059 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 20:17:43,808 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 20:18:58,105 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 20:19:13,073 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 20:24:00,121 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:33:54,496 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:34:34,362 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:34:37,487 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:34:49,245 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:34:50,310 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:34:55,386 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:36:34,182 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:36:34,815 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:36:35,431 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:36:59,781 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:37:47,966 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:37:50,512 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:37:51,263 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:38:13,973 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:45:48,081 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:52:27,303 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:52:28,846 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:52:37,484 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:52:50,840 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:52:59,877 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:53:01,583 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:53:37,331 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:54:42,064 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:56:30,774 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:56:58,110 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:56:58,787 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:56:59,411 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:57:26,060 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:58:31,082 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:58:46,036 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:59:10,826 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 22:59:47,891 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:17,353 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:22,740 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:25,009 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:26,974 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:28,617 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:30,441 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:31,521 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:50,938 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:01:59,658 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:02:01,413 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:02:19,166 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:08:08,775 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:12:28,729 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:16:50,968 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:16:53,335 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:16:56,632 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:16:59,181 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:17:00,837 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:17:01,524 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:17:02,106 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:17:03,777 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:17:05,244 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:18:24,773 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:18:28,145 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:18:29,830 [http-nio-8080-exec-5] ERROR com.ticketWave.ticketWave.service.CustomerService - Invalid username or password
+2024-11-24 23:18:31,596 [http-nio-8080-exec-6] ERROR com.ticketWave.ticketWave.service.CustomerService - Invalid username or password
+2024-11-24 23:19:43,381 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:20:08,091 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:20:09,825 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:20:24,732 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:20:38,443 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:20:43,227 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:20:44,586 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:20:46,324 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:21:22,837 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:21:24,588 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:20,103 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:29,773 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:31,304 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:32,439 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:33,816 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:35,989 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:40,006 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:23:54,038 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:24,572 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:51,607 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:54,692 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:55,853 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:58,011 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:58,754 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:25:59,424 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:26:00,149 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:26:37,512 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:26:42,775 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:26:46,573 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:26:51,257 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:26:57,930 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:27:21,434 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:27:41,644 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:27:44,238 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:28:13,044 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:28:21,626 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:41:40,759 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:43:28,439 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:43:43,611 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:43:46,742 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:43:51,866 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:43:54,541 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:44:09,790 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:44:22,648 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:44:32,059 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 logged in successfully
+2024-11-24 23:45:13,093 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:45:14,953 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:46:23,976 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:46:40,392 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:47:02,323 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:51:59,106 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:53:16,074 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:54:02,164 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:54:20,451 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:54:42,689 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:55:17,322 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:55:20,722 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:55:32,738 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:55:50,232 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:56:44,221 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-24 23:57:13,893 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:02:10,363 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:02:31,873 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:02:55,838 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:03:14,657 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:04:05,485 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:04:14,913 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:04:43,810 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:05:23,173 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:05:26,683 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:05:57,072 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:06:13,246 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:06:26,174 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:06:46,849 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:00,747 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:07,467 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:20,357 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:26,095 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:29,271 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:32,623 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:07:42,002 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:08:10,780 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:09:54,958 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:18:06,611 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:19:23,092 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:20:14,075 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:21:09,074 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:22:17,391 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:24:28,011 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:25:50,086 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:26:54,475 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:26:58,099 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-11-25 00:27:05,217 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:27:52,480 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor Sithum registered successfully
+2024-11-25 00:28:07,309 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:28:07,311 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:28:07,313 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:28:07,330 [Thread-2] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:28:07,642 [Thread-2] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:28:07,954 [Thread-2] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:28:07,965 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:29:02,659 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:29:20,583 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:29:20,585 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:29:20,587 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:29:20,589 [Thread-4] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:29:20,905 [Thread-4] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:29:21,211 [Thread-4] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:29:21,215 [Thread-3] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:35:59,329 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:35:59,331 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:35:59,332 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:35:59,334 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:35:59,651 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:35:59,961 [Thread-5] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:36:37,013 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:36:37,017 [Thread-6] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:38:30,330 [Thread-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:38:30,333 [Thread-7] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:40:01,323 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-25 00:40:36,421 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:40:36,425 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:40:36,426 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:40:36,428 [Thread-8] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:40:36,747 [Thread-8] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:40:37,052 [Thread-8] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:40:55,310 [Thread-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:40:55,314 [Thread-9] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:47:03,258 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-11-25 00:47:13,424 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:13,449 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:13,451 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:13,500 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:47:13,822 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:47:14,137 [Thread-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:47:20,991 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:21,019 [Thread-2] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:47:21,030 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:47:21,036 [Thread-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:47:21,344 [Thread-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer 1 successfully purchased all requested tickets.
+2024-11-25 00:47:44,313 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:58,908 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:58,911 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:58,914 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:47:58,917 [Thread-4] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:47:59,232 [Thread-4] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:47:59,539 [Thread-4] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:47:59,542 [Thread-3] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:47:59,560 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:47:59,564 [Thread-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:47:59,869 [Thread-3] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:47:59,875 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:47:59,879 [Thread-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:48:00,198 [Thread-3] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:48:00,209 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:48:00,214 [Thread-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:48:00,523 [Thread-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer 1 successfully purchased all requested tickets.
+2024-11-25 00:48:19,310 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:32,702 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:32,705 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:32,708 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:32,710 [Thread-6] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:48:33,024 [Thread-6] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:48:33,337 [Thread-6] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 2 tickets
+2024-11-25 00:48:40,579 [Thread-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:40,584 [Thread-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:40,588 [Thread-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:40,589 [Thread-7] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor waiting pool becomes available
+2024-11-25 00:48:56,901 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:56,903 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:56,906 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-25 00:48:56,909 [Thread-8] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:48:57,221 [Thread-8] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:48:57,529 [Thread-8] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:48:57,844 [Thread-8] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-11-25 00:48:58,148 [Thread-8] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 2 released 4 tickets
+2024-11-25 00:48:58,150 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:48:58,157 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:48:58,162 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:48:58,485 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:48:58,505 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:48:58,512 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:48:58,821 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:48:58,827 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:48:58,830 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:48:59,147 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket save successful
+2024-11-25 00:48:59,156 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-11-25 00:48:59,159 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer1 purchased a ticket.
+2024-11-25 00:48:59,470 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer 1 successfully purchased all requested tickets.

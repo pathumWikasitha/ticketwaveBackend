@@ -105,7 +105,8 @@ public class TicketService {
             vendor = (Vendor) userRepo.findUser(vendorID, "VENDOR");
             if (vendor != null) {
                 Ticket ticket = new Ticket();
-                ticket.setEvent(modelMapper.map(eventDTO, Event.class));
+                Event event = modelMapper.map(eventDTO, Event.class);
+                ticket.setEvent(event);
                 ticket.setVendor(vendor);
                 ticket.setCustomer(null);
                 logger.info("Vendor set successful");
