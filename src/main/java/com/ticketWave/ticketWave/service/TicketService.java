@@ -1,7 +1,9 @@
 package com.ticketWave.ticketWave.service;
 
+import com.ticketWave.ticketWave.dto.EventDTO;
 import com.ticketWave.ticketWave.dto.TicketDTO;
 import com.ticketWave.ticketWave.model.Customer;
+import com.ticketWave.ticketWave.model.Event;
 import com.ticketWave.ticketWave.model.Ticket;
 import com.ticketWave.ticketWave.model.Vendor;
 import com.ticketWave.ticketWave.repo.TicketRepo;
@@ -85,7 +87,8 @@ public class TicketService {
         try {
             customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
             if (customer != null) {
-                Ticket ticket = setData(ticketDTO);
+                Ticket ticket = new Ticket();
+                ticket.setEvent(ticketDTO.getEvent());
                 ticket.setVendor(ticketDTO.getVendor());
                 ticket.setCustomer(customer);
                 ticketRepo.save(ticket);
@@ -96,12 +99,13 @@ public class TicketService {
         }
     }
 
-    public TicketDTO setVendor(int vendorID, TicketDTO ticketDTO) {
+    public TicketDTO setVendor(int vendorID, EventDTO eventDTO) {
         Vendor vendor;
         try {
             vendor = (Vendor) userRepo.findUser(vendorID, "VENDOR");
             if (vendor != null) {
-                Ticket ticket = setData(ticketDTO);
+                Ticket ticket = new Ticket();
+                ticket.setEvent(modelMapper.map(eventDTO, Event.class));
                 ticket.setVendor(vendor);
                 ticket.setCustomer(null);
                 logger.info("Vendor set successful");
@@ -114,13 +118,4 @@ public class TicketService {
 
     }
 
-    private Ticket setData(TicketDTO ticketDTO) {
-        Ticket ticket = new Ticket();
-        ticket.setTicketPrice(ticketDTO.getTicketPrice());
-        ticket.setId(ticketDTO.getId());
-        ticket.setEventName(ticketDTO.getEventName());
-        ticket.setEventDate(ticketDTO.getEventDate());
-        ticket.setEventDescription(ticketDTO.getEventDescription());
-        return ticket;
-    }
 }

@@ -45,7 +45,7 @@ public class CustomerService {
             if (user != null) {
                 CustomerDTO customerDTO = modelMapper.map(user, CustomerDTO.class);
                 customerDTO.setPassword("");
-                logger.info("Customer"+customerDTO.getId()+" get success");
+                logger.info("Customer" + customerDTO.getId() + " get success");
                 return customerDTO;
             }
         } catch (Exception e) {
@@ -62,13 +62,29 @@ public class CustomerService {
         return customerDTO;
     }
 
+    public CustomerDTO loginCustomer(CustomerDTO customerDTO) {
+        try {
+            User user = userRepo.loginUser(customerDTO.getEmail(), customerDTO.getPassword(), customerDTO.getRole());
+            if (user != null) {
+                logger.info("Customer" + user.getId() + " logged in successfully");
+                return modelMapper.map(user, CustomerDTO.class);
+            }else {
+                logger.error("Invalid username or password");
+            }
+        } catch (Exception e) {
+            logger.error("Login error"+e.getMessage());
+        }
+        return null;
+    }
+
+
     public CustomerDTO updateCustomer(CustomerDTO customerDTO) {
         User user;
         try {
             user = userRepo.findUser(Math.toIntExact(customerDTO.getId()), "CUSTOMER");
             if (user != null) {
                 Customer customer = userRepo.save(modelMapper.map(customerDTO, Customer.class));
-                logger.info("Customer"+customerDTO.getId()+" updated Successfully");
+                logger.info("Customer" + customerDTO.getId() + " updated Successfully");
                 return modelMapper.map(customer, CustomerDTO.class);
             }
         } catch (Exception e) {

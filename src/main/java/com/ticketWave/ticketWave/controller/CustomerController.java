@@ -28,13 +28,22 @@ public class CustomerController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> registerCustomer(@RequestBody CustomerDTO customerDTO) {
+    public ResponseEntity<Boolean> registerCustomer(@RequestBody CustomerDTO customerDTO) {
         CustomerDTO customer = customerService.registerCustomer(customerDTO);
         if (customer == null) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(false);
         }
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok().body(true);
     }
+    @PostMapping("/login")
+    public ResponseEntity<CustomerDTO> loginCustomer(@RequestBody CustomerDTO customerDTO) {
+        CustomerDTO login = customerService.loginCustomer(customerDTO);
+        if (login == null) {
+            return ResponseEntity.badRequest().body(null);
+        }
+        return ResponseEntity.ok(login);
+    }
+
 
     @PutMapping("/update")
     public ResponseEntity<String> updateCustomer(@RequestBody CustomerDTO customerDTO) {

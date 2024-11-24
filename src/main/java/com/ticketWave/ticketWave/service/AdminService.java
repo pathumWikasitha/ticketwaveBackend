@@ -28,7 +28,7 @@ public class AdminService {
             user = userRepo.findUser(Math.toIntExact(adminDTO.getId()), "ADMIN");
             if (user != null) {
                 Admin admin = userRepo.save(modelMapper.map(adminDTO, Admin.class));
-                logger.info("Admin"+adminDTO.getId()+" updated successfully");
+                logger.info("Admin" + adminDTO.getId() + " updated successfully");
                 return modelMapper.map(admin, AdminDTO.class);
             }
         } catch (Exception e) {
@@ -43,6 +43,21 @@ public class AdminService {
         userRepo.save(admin);
         logger.info("Admin " + adminDTO.getId() + " created successfully");
         return adminDTO;
+    }
+
+    public AdminDTO loginAdmin(AdminDTO adminDTO) {
+        try {
+            User user = userRepo.loginUser(adminDTO.getEmail(), adminDTO.getPassword(), adminDTO.getRole());
+            if (user != null) {
+                logger.info("Admin" + user.getId() + " logged in successfully");
+                return modelMapper.map(user, AdminDTO.class);
+            } else {
+                logger.error("Invalid username or password");
+            }
+        } catch (Exception e) {
+            logger.error("Login error" + e.getMessage());
+        }
+        return null;
     }
 
     public void startSystem() {
@@ -64,4 +79,5 @@ public class AdminService {
         }
         return null;
     }
+
 }
