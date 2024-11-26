@@ -35,15 +35,6 @@ public class CustomerController {
         }
         return ResponseEntity.ok().body(true);
     }
-    @PostMapping("/login")
-    public ResponseEntity<CustomerDTO> loginCustomer(@RequestBody CustomerDTO customerDTO) {
-        CustomerDTO login = customerService.loginCustomer(customerDTO);
-        if (login == null) {
-            return ResponseEntity.badRequest().body(null);
-        }
-        return ResponseEntity.ok(login);
-    }
-
 
     @PutMapping("/update")
     public ResponseEntity<String> updateCustomer(@RequestBody CustomerDTO customerDTO) {

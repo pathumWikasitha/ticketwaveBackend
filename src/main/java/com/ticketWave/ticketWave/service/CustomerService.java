@@ -62,22 +62,6 @@ public class CustomerService {
         return customerDTO;
     }
 
-    public CustomerDTO loginCustomer(CustomerDTO customerDTO) {
-        try {
-            User user = userRepo.loginUser(customerDTO.getEmail(), customerDTO.getPassword(), customerDTO.getRole());
-            if (user != null) {
-                logger.info("Customer" + user.getId() + " logged in successfully");
-                return modelMapper.map(user, CustomerDTO.class);
-            }else {
-                logger.error("Invalid username or password");
-            }
-        } catch (Exception e) {
-            logger.error("Login error"+e.getMessage());
-        }
-        return null;
-    }
-
-
     public CustomerDTO updateCustomer(CustomerDTO customerDTO) {
         User user;
         try {

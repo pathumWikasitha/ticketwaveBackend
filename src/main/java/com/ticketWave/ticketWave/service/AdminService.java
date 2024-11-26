@@ -45,21 +45,6 @@ public class AdminService {
         return adminDTO;
     }
 
-    public AdminDTO loginAdmin(AdminDTO adminDTO) {
-        try {
-            User user = userRepo.loginUser(adminDTO.getEmail(), adminDTO.getPassword(), adminDTO.getRole());
-            if (user != null) {
-                logger.info("Admin" + user.getId() + " logged in successfully");
-                return modelMapper.map(user, AdminDTO.class);
-            } else {
-                logger.error("Invalid username or password");
-            }
-        } catch (Exception e) {
-            logger.error("Login error" + e.getMessage());
-        }
-        return null;
-    }
-
     public void startSystem() {
         systemDTO.setRunning(true);
         logger.info("System started successfully");

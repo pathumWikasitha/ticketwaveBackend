@@ -74,14 +74,6 @@ public class AdminController {
         return ResponseEntity.ok("Admin registered successfully");
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<AdminDTO> loginAdmin(@RequestBody AdminDTO adminDTO) {
-        AdminDTO login = adminService.loginAdmin(adminDTO);
-        if (login == null) {
-            return ResponseEntity.badRequest().body(null);
-        }
-        return ResponseEntity.ok(login);
-    }
 
     @PutMapping("/update")
     public ResponseEntity<String> updateAdmin(@RequestBody AdminDTO adminDTO) {

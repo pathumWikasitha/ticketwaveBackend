@@ -123,21 +123,6 @@ public class VendorService {
         return modelMapper.map(vendor, VendorDTO.class);
     }
 
-    public VendorDTO loginVendor(VendorDTO vendorDTO) {
-        try {
-            User user = userRepo.loginUser(vendorDTO.getEmail(), vendorDTO.getPassword(), vendorDTO.getRole());
-            if (user != null) {
-                logger.info("Vendor" + user.getId() + " logged in successfully");
-                return modelMapper.map(user, VendorDTO.class);
-            }else {
-                logger.error("Invalid username or password");
-            }
-        } catch (Exception e) {
-            logger.error("Login error"+e.getMessage());
-        }
-        return null;
-    }
-
     public VendorDTO updateVendor(VendorDTO vendorDTO) {
         User user;
         try {

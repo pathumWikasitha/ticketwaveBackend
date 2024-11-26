@@ -39,15 +39,6 @@ public class VendorController {
         return ResponseEntity.ok().body(vendor);
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<VendorDTO> loginCustomer(@RequestBody VendorDTO vendorDTO) {
-        VendorDTO login = vendorService.loginVendor(vendorDTO);
-        if (login == null) {
-            return ResponseEntity.badRequest().body(null);
-        }
-        return ResponseEntity.ok(login);
-    }
-
     @PutMapping("/update")
     public ResponseEntity<String> updateVendor(@RequestBody VendorDTO vendorDTO) {
         VendorDTO vendor = vendorService.updateVendor(vendorDTO);
