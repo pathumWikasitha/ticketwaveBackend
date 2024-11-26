@@ -675,3 +675,11 @@
 2024-11-26 11:15:03,050 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
 2024-11-26 11:42:11,106 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
 2024-11-26 11:44:17,677 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-26 11:46:03,000 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-11-26 11:46:19,122 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-26 11:46:35,468 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-26 11:46:37,008 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Event successful
+2024-11-26 18:15:44,456 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-11-26 18:15:47,562 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-11-26 18:15:50,880 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-11-26 18:15:50,880 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped

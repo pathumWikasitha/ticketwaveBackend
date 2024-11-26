@@ -3,10 +3,8 @@ package com.ticketWave.ticketWave.controller;
 import com.ticketWave.ticketWave.dto.AdminDTO;
 import com.ticketWave.ticketWave.dto.ConfigurationDTO;
 import com.ticketWave.ticketWave.dto.SystemDTO;
-import com.ticketWave.ticketWave.service.AdminService;
-import com.ticketWave.ticketWave.service.ConfigurationService;
-import com.ticketWave.ticketWave.service.CustomerService;
-import com.ticketWave.ticketWave.service.VendorService;
+import com.ticketWave.ticketWave.service.*;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping(value = "api/v1/admin")
 public class AdminController {
+    private static final Logger logger = Logger.getLogger(AdminController.class);
 
     @Autowired
     private ConfigurationService configurationService;
@@ -99,6 +98,7 @@ public class AdminController {
             vendorService.stopVendorThreads();
             customerService.stopCustomerThreads();
             systemDTO.setRunning(false);
+            logger.info("System stop successfully");
             return ResponseEntity.ok("System stopped..");
         }
         return ResponseEntity.ok("System not running");
