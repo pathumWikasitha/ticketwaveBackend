@@ -6,7 +6,10 @@ import com.ticketWave.ticketWave.repo.EventRepo;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Service
@@ -20,13 +23,28 @@ public class EventService {
         this.modelMapper = modelMapper;
     }
 
-    public EventDTO getEvent() {
+    public EventDTO getEventById(int id) {
         Event event;
         try {
-            event = eventRepo.findAll().getFirst();
-            if (event != null) {
-                logger.info("Get Event successful");
-                return modelMapper.map(event, EventDTO.class);
+            event = eventRepo.findById(id).get();
+            logger.info("Event with id " + id + " found");
+            return modelMapper.map(event, EventDTO.class);
+
+        }catch (Exception e) {
+            logger.info("Event with id " + id + " not found");
+        }
+        return null;
+    }
+
+
+    public List<EventDTO> getEvents() {
+        List<Event> events;
+        try {
+            events = eventRepo.findAll();
+            if (!events.isEmpty()) {
+                logger.info("Get Events successful");
+                return modelMapper.map(events, new TypeToken<List<EventDTO>>() {
+                }.getType());
             }
         } catch (Exception e) {
             logger.error("No events in the system");
@@ -34,6 +52,7 @@ public class EventService {
         return null;
 
     }
+
     public EventDTO updateEvent(EventDTO eventDTO) {
         Event event;
         try {
@@ -53,23 +72,22 @@ public class EventService {
 
     public EventDTO createEvent(EventDTO eventDTO) {
         try {
-            eventRepo.deleteAll();
             Event event = modelMapper.map(eventDTO, Event.class);
             eventRepo.save(event);
             logger.info("Event created successfully");
             return eventDTO;
-        }catch (Exception e) {
+        } catch (Exception e) {
             logger.error("Error while creating event");
         }
         return null;
     }
 
-    public EventDTO deleteEvent(EventDTO eventDTO){
+    public EventDTO deleteEvent(EventDTO eventDTO) {
         try {
             eventRepo.deleteAll();
             logger.info("Event deleted successfully");
             return eventDTO;
-        }catch (Exception e) {
+        } catch (Exception e) {
             logger.error("Error while deleting event");
         }
         return null;

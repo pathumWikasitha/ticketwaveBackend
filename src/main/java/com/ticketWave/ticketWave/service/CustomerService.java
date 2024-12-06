@@ -78,7 +78,7 @@ public class CustomerService {
         return null;
     }
 
-    public void purchaseTicket(int customerID, int count) {
+    public void purchaseTicket(int customerID, int count, EventDTO event) {
         Thread customerThread = new Thread(() -> {
             ConfigurationDTO configurationDTO = configurationService.getConfiguration();
             int customerRetrievalRate = configurationDTO.getTicketReleaseRate(); // Retrieval rate in milliseconds
@@ -99,16 +99,21 @@ public class CustomerService {
                     } else {
                         while (ticketsPurchased < count && !ticketPoolDTO.getSynTicketList().isEmpty()) {
                             try {
-                                TicketDTO ticketDTO = ticketPoolDTO.getSynTicketList().getFirst();
-                                ticketPoolDTO.getSynTicketList().remove(ticketDTO); // Remove ticket from the pool
-                                ticketService.saveTicket(customerID, ticketDTO);
-                                ticketsPurchased++; // Increment the purchased count
+                                for (int i = 0; i < ticketPoolDTO.getSynTicketList().size(); i++) {
+                                    if (ticketPoolDTO.getSynTicketList().get(i).getEvent().getEventId() == event.getEventId() && ticketsPurchased < count) {  //get tickets event vise
+                                        TicketDTO ticketDTO = ticketPoolDTO.getSynTicketList().get(i);
+                                        ticketPoolDTO.getSynTicketList().remove(ticketDTO); // Remove ticket from the pool
+                                        ticketService.saveTicket(customerID, ticketDTO);
+                                        ticketsPurchased++; // Increment the purchased count
 
-                                configurationDTO.setTotalTickets(totalTickets - 1);
-                                configurationService.setConfiguration(configurationDTO); //save configuration when customer purchase a ticket
-                                logger.info("Customer" + customerID + " purchased a ticket.");
+                                        configurationDTO.setTotalTickets(totalTickets - 1);
+                                        configurationService.setConfiguration(configurationDTO); //save configuration when customer purchase a ticket
+                                        logger.info("Customer" + customerID + " purchased a"+ ticketDTO.getEvent() +"ticket.");
 
-                                Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
+                                        Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
+                                    }
+                                }
+
                             } catch (InterruptedException e) {
                                 logger.error("Customer " + customerID + " was interrupted");
                                 Thread.currentThread().interrupt();

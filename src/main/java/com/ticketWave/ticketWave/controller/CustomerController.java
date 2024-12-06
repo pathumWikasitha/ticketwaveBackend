@@ -1,6 +1,7 @@
 package com.ticketWave.ticketWave.controller;
 
 import com.ticketWave.ticketWave.dto.CustomerDTO;
+import com.ticketWave.ticketWave.dto.EventDTO;
 import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,9 +48,9 @@ public class CustomerController {
     }
 
     @PostMapping("/{customerID}/purchaseTicket/{count}")
-    public ResponseEntity<String> purchaseTicket(@PathVariable int customerID, @PathVariable int count) {
+    public ResponseEntity<String> purchaseTicket(@PathVariable int customerID, @PathVariable int count, @RequestBody EventDTO eventDTO) {
         if (systemDTO.isRunning()) {
-            customerService.purchaseTicket(customerID, count);
+            customerService.purchaseTicket(customerID, count,eventDTO);
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.badRequest().body("System is not running");

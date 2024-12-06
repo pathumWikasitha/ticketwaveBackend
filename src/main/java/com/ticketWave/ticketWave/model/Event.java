@@ -23,4 +23,5 @@ public class Event {
     private String eventDescription;
     private String eventLocation;
     private String eventDateTime;
+    private String imageUrl;
 }

@@ -39,9 +39,7 @@ public class TicketService {
             if (!tickets.isEmpty()) {
                 List<TicketDTO> ticketList = modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
                 }.getType());
-                for (int i = 0; i < ticketList.size(); i++) {
-                    ticketList.set(i, removeCustomerVendorDetails(ticketList.get(i)));
-                }
+                ticketList.replaceAll(this::removeCustomerVendorDetails);
                 logger.info("Get all tickets successful");
                 return ticketList;
             }
