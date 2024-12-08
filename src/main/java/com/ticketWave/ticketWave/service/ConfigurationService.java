@@ -26,9 +26,16 @@ public class ConfigurationService {
     }
 
     public ConfigurationDTO setConfiguration(ConfigurationDTO configuration) {
-        configurationRepo.deleteAll();
         configurationRepo.save(modelMapper.map(configuration, Configuration.class));
         logger.info("Configuration saved");
+        return modelMapper.map(configuration, ConfigurationDTO.class);
+    }
+
+    public ConfigurationDTO updateConfiguration(ConfigurationDTO configuration) {
+        int configurationID = configurationRepo.findAll().getLast().getConfigurationId();
+        configuration.setConfigurationId(configurationID);
+        configurationRepo.save(modelMapper.map(configuration, Configuration.class));
+        logger.info("Configuration Updated");
         return modelMapper.map(configuration, ConfigurationDTO.class);
     }
 
@@ -36,7 +43,7 @@ public class ConfigurationService {
     public ConfigurationDTO getConfiguration() {
         Configuration configuration;
         try {
-            configuration = configurationRepo.findAll().getFirst();
+            configuration = configurationRepo.findAll().getLast();
             if (configuration != null) {
                 logger.info("Configuration found");
                 return modelMapper.map(configuration, ConfigurationDTO.class);
@@ -49,10 +56,17 @@ public class ConfigurationService {
 
     }
 
-    public void deleteConfiguration() {
-        configurationRepo.deleteAll();
-        systemDTO.setRunning(Boolean.FALSE);
-        logger.info("Configuration deleted.");
+    public Boolean deleteConfiguration() {
+        try {
+            int configurationId = configurationRepo.findAll().getLast().getConfigurationId();
+            configurationRepo.deleteById(configurationId);
+            systemDTO.setRunning(Boolean.FALSE);
+            logger.info("Configuration deleted.");
+            return true;
+        } catch (Exception e) {
+            logger.error("Configuration not found to delete");
+        }
+        return false;
     }
 
 

@@ -1331,3 +1331,281 @@
 2024-12-06 22:20:49,423 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
 2024-12-06 22:21:06,392 [http-nio-8080-exec-3] ERROR com.ticketWave.ticketWave.service.TicketService - tickets not released yet
 2024-12-06 22:25:45,151 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets successful
+2024-12-06 22:28:59,968 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets successful
+2024-12-06 22:30:51,271 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:31:04,393 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:32:10,510 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:33:11,225 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:42:19,402 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-06 22:42:27,525 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:10,233 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:14,984 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:17,483 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:18,260 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:19,902 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:33,805 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:44:46,935 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:45:21,804 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-06 22:45:30,901 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:45:33,778 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 22:45:40,546 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-06 23:17:00,493 [http-nio-8080-exec-2] ERROR com.ticketWave.ticketWave.service.UserService - Login errorQuery did not return a unique result: 5 results were returned
+2024-12-07 00:27:04,461 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets successful
+2024-12-08 08:45:12,869 [http-nio-8080-exec-2] ERROR com.ticketWave.ticketWave.service.UserService - Login errorQuery did not return a unique result: 5 results were returned
+2024-12-08 08:50:35,101 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:51:52,091 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:51:55,902 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-08 08:52:04,489 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:52:05,818 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:53:34,118 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:53:36,770 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-08 08:53:56,901 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:54:42,506 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-08 08:56:14,344 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:56:30,107 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:56:48,352 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:58:03,323 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:58:07,776 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:58:28,119 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 08:58:51,991 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 08:58:55,027 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-08 09:00:28,779 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:03:30,317 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:12:15,588 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 09:13:00,678 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:25:45,305 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 09:26:02,189 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:32:31,126 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 09:38:07,087 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:38:09,744 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:38:40,556 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:38:47,360 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:38:55,669 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:39:10,941 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:39:10,941 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 09:39:13,058 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:39:13,059 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 09:39:18,428 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 09:39:18,429 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 09:54:31,162 [http-nio-8080-exec-8] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 09:54:33,802 [http-nio-8080-exec-9] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:00:21,295 [http-nio-8080-exec-1] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:00:49,385 [http-nio-8080-exec-2] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:00:59,124 [http-nio-8080-exec-3] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:01:08,375 [http-nio-8080-exec-4] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:01:36,016 [http-nio-8080-exec-5] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:11:55,947 [http-nio-8080-exec-1] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:18:53,231 [http-nio-8080-exec-3] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:18:58,766 [http-nio-8080-exec-2] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 10:19:21,587 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:19:35,233 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:19:37,010 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:19:44,493 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:19:44,494 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:19:44,494 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:19:47,505 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:21:26,075 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:21:26,790 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:21:27,546 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:21:37,308 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 10:21:38,930 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:21:39,882 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:24:31,121 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:24:31,979 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:24:35,089 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 10:25:03,417 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:25:09,329 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 10:27:49,108 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:27:49,175 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:28:01,642 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 10:28:05,902 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:05,935 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:28:48,123 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:28:50,217 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:50,231 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:28:51,658 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:51,672 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:28:52,450 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:52,461 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:28:53,396 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:53,408 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:28:54,543 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:54,556 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:28:55,608 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:28:55,608 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:28:55,609 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:28:59,781 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:28:59,796 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:29:51,142 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:29:51,156 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:29:52,887 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:29:55,513 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:29:55,528 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:29:56,702 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:29:56,703 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:29:56,703 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:31:11,739 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:31:11,755 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:32:00,311 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:32:02,823 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:32:02,823 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:32:02,823 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:32:18,361 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:32:18,375 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:32:20,840 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:32:22,887 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:32:22,887 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:32:22,887 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:32:34,108 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:32:34,122 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:32:35,016 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:32:35,028 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:32:35,666 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:32:35,677 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:35:30,815 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:35:32,831 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:35:33,734 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:35:36,515 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:35:42,353 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:35:57,786 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:35:59,839 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:36:02,721 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:02,737 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:02,742 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:03,354 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:03,371 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:03,377 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:03,907 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:03,923 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:03,927 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:04,781 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:04,795 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:04,800 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:05,376 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:05,390 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:05,395 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:05,906 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:05,918 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:05,922 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:06,380 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:06,401 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:06,405 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:06,855 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:06,867 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:06,873 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:07,397 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:07,411 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:07,416 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:07,926 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:07,938 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:07,942 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:08,441 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:08,462 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:08,467 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:09,400 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:09,414 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:36:09,418 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:36:13,900 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 10:38:31,897 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:38:31,917 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:38:31,922 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:38:35,431 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:38:35,433 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:38:35,433 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:38:38,130 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:38:50,341 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 10:38:56,558 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:38:57,976 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:38:58,730 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:39:00,182 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:39:00,848 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:39:01,384 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:39:03,898 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:39:07,095 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:39:09,292 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:09,315 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:39:09,318 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:09,908 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:09,922 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:39:09,926 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:10,532 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:10,547 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:39:10,553 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:11,126 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:11,140 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:39:11,144 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:39:13,072 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:39:13,073 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:39:13,073 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:39:16,264 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:43:32,060 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:43:37,938 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration Updated
+2024-12-08 10:44:26,770 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:44:27,412 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:44:28,770 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:44:30,863 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-08 10:44:32,869 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:44:32,887 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:44:32,891 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-08 10:44:37,088 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor threads stopped
+2024-12-08 10:44:37,088 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer threads stopped
+2024-12-08 10:44:37,089 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - System stop successfully
+2024-12-08 10:44:39,211 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:44:41,186 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:46:42,832 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:46:48,693 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:46:49,377 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:47:27,542 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:48:52,083 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:48:53,673 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:48:56,291 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:49:02,602 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:49:04,210 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:51:16,157 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:51:20,290 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:51:22,028 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:56:03,380 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:56:48,337 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:56:49,114 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:56:49,980 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:56:52,962 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 10:56:55,658 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 10:57:08,098 [http-nio-8080-exec-7] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found to delete
+2024-12-08 10:57:36,690 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:57:44,180 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 10:57:47,307 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:57:48,073 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 10:57:51,483 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 10:58:10,596 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 11:00:29,025 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:00:36,438 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:00:41,883 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 11:00:44,664 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 11:00:46,558 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:00:53,777 [http-nio-8080-exec-2] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:01:01,211 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 11:01:14,130 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:01:16,218 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-08 11:01:28,752 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 11:07:48,766 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:09:20,625 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:10:54,742 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:10:56,186 [http-nio-8080-exec-3] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:11:36,168 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:11:38,715 [http-nio-8080-exec-5] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:13:48,567 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:13:50,481 [http-nio-8080-exec-8] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:13:54,684 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:13:56,115 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:13:57,336 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:25:00,444 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:25:03,163 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:25:06,540 [http-nio-8080-exec-5] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:25:09,647 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:25:10,427 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:25:20,247 [http-nio-8080-exec-8] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:26:13,863 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:26:15,796 [http-nio-8080-exec-10] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:26:56,360 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:27:42,168 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:27:47,815 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ConfigurationDTO {
+    private int configurationId;
     private int totalTickets;
     private int ticketReleaseRate;
     private int customerRetrievalRate;
