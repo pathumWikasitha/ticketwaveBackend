@@ -40,12 +40,12 @@ public class VendorController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<String> updateVendor(@RequestBody VendorDTO vendorDTO) {
+    public ResponseEntity<VendorDTO> updateVendor(@RequestBody VendorDTO vendorDTO) {
         VendorDTO vendor = vendorService.updateVendor(vendorDTO);
         if (vendor == null) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(vendor);
     }
 
     @PostMapping("createEvent")

@@ -1609,3 +1609,311 @@
 2024-12-08 11:26:56,360 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
 2024-12-08 11:27:42,168 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
 2024-12-08 11:27:47,815 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:29:50,698 [http-nio-8080-exec-1] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:30:02,353 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:30:23,636 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:30:27,308 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:32:27,523 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:32:38,131 [http-nio-8080-exec-7] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:32:45,689 [http-nio-8080-exec-8] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 11:32:48,181 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 11:33:13,317 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 11:33:16,875 [http-nio-8080-exec-2] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found to delete
+2024-12-08 11:34:27,164 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:34:36,650 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 11:34:40,955 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 11:35:12,998 [http-nio-8080-exec-1] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Error updating configuration
+java.util.NoSuchElementException
+	at java.base/java.util.ArrayList.getLast(ArrayList.java:454)
+	at com.ticketWave.ticketWave.service.ConfigurationService.updateConfiguration(ConfigurationService.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at com.ticketWave.ticketWave.service.ConfigurationService$$SpringCGLIB$$0.updateConfiguration(<generated>)
+	at com.ticketWave.ticketWave.controller.AdminController.updateConfiguration(AdminController.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-12-08 11:36:22,192 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:36:30,191 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 11:36:33,300 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 11:36:48,486 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 11:36:53,548 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-08 11:36:55,707 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration deleted.
+2024-12-08 13:55:29,823 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 13:55:49,194 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 14:03:30,036 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 14:03:32,957 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 14:03:33,961 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 14:03:43,542 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:46,465 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:47,828 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:48,640 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:49,223 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:49,777 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:50,347 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:03:50,816 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:02,482 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:05,765 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-08 14:04:07,427 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 14:04:11,327 [http-nio-8080-exec-7] ERROR com.ticketWave.ticketWave.service.ConfigurationService - Configuration not found
+2024-12-08 14:04:15,650 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:24,066 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:24,895 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:25,172 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:25,367 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:25,972 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:26,215 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:26,396 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:26,596 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:26,788 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:26,985 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:27,174 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:27,364 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:27,587 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:04:27,756 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:05:42,825 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:06:23,293 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:06:32,129 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:07:03,259 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:07:05,768 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:01,601 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:03,768 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:29,004 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:31,153 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:31,829 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:32,295 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:42,321 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:08:42,338 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:10:33,307 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:10:35,549 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:11:27,716 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:11:30,792 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:11:31,588 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:11:32,855 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:12:20,196 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:12:23,430 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:13:08,732 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:13:38,777 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:13:48,563 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:14:12,272 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:14:13,831 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:14:54,406 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:15:16,985 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:15:20,354 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:15:49,936 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:15:55,068 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:16:30,468 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:16:34,199 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:16:45,397 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:16:50,801 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:16:55,557 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:02,771 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:08,179 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:12,526 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:19,969 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:36,346 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:42,859 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:50,625 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:17:59,060 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:18:10,497 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:18:14,435 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:18:32,647 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:18:43,648 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 14:18:52,424 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:18:55,641 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:18:56,452 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:18:57,023 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:18:57,522 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:18:58,028 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:26,587 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:35,971 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:39,112 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:39,817 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:40,295 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:55,491 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:19:59,796 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:46:43,630 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:46:47,934 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:46:49,030 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:47:00,466 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:47:02,158 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:47:27,737 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:47:29,278 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:47:41,053 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:47:45,439 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:47:50,068 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:48:09,726 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:48:24,253 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:48:28,775 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:48:43,897 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:48:46,815 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:48:56,780 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:48:57,808 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:49:00,301 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:49:34,822 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:49:45,770 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:49:52,766 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:50:01,888 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:50:04,329 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:50:12,567 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:50:26,436 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:50:31,616 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:51:32,612 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:51:41,156 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:52:40,906 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:52:46,151 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:52:55,951 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:53:19,920 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:53:58,667 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:55:32,614 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:55:33,391 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:55:35,277 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:55:44,318 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 14:57:53,704 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 14:59:27,592 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:01:51,936 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:02:02,592 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:02:07,207 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:02:29,349 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:02:51,738 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:03:23,400 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:03:26,465 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:03:33,377 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:03:38,719 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:05:05,425 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:03,958 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:07,241 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:26,270 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:29,721 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:34,176 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:37,424 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:44,104 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:50,718 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:55,791 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:06:58,212 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:07:04,172 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:07:50,639 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:08:38,773 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:08:45,013 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:08:48,574 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:08:55,277 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:09:04,444 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:09:07,223 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:09:53,405 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:09:59,817 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:10:20,329 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:10:25,901 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:10:38,378 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:10:48,873 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:10:53,905 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:10:58,592 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:06,226 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:13,174 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:19,995 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:23,108 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:29,645 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:34,589 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:11:56,957 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:00,271 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:14,249 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:22,553 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:24,967 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:12:26,301 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-08 15:12:41,970 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:12:43,371 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:47,496 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:51,290 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:12:53,408 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:15:21,138 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:15:57,101 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:16:00,466 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:16:11,333 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:16:35,457 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:16:40,380 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:17:18,381 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:17:27,948 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:17:34,636 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:18:11,973 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:18:17,878 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:18:32,810 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:19:00,877 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:19:18,112 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:19:22,496 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 15:19:28,696 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:20:09,072 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:20:15,317 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:21:36,233 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:21:39,987 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:21:50,953 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:22:06,150 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:22:10,153 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:22:11,401 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:22:24,116 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:23:12,821 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:23:19,140 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:23:49,705 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:24:02,285 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:24:19,744 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:26:05,119 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:26:34,451 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 15:31:44,481 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-08 16:26:12,282 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.AdminService - Admin10 updated successfully
+2024-12-08 16:26:27,959 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-08 16:26:31,935 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.UserService - admin124 (ADMIN)  logged in successfully
+2024-12-08 16:26:33,151 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-08 16:27:03,569 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.AdminService - Admin10 updated successfully
+2024-12-08 16:28:11,298 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.AdminService - Admin10 updated successfully

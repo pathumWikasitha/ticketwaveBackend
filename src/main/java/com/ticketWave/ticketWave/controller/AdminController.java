@@ -88,12 +88,12 @@ public class AdminController {
 
 
     @PutMapping("/update")
-    public ResponseEntity<String> updateAdmin(@RequestBody AdminDTO adminDTO) {
+    public ResponseEntity<AdminDTO> updateAdmin(@RequestBody AdminDTO adminDTO) {
         AdminDTO updatedAdmin = adminService.updateAdmin(adminDTO);
         if (updatedAdmin == null) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok("Admin updated successfully.");
+        return ResponseEntity.ok(updatedAdmin);
     }
 
     @PostMapping("/start")

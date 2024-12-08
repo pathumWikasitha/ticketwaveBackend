@@ -38,10 +38,10 @@ public class CustomerController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<String> updateCustomer(@RequestBody CustomerDTO customerDTO) {
+    public ResponseEntity<CustomerDTO> updateCustomer(@RequestBody CustomerDTO customerDTO) {
         CustomerDTO updatedCustomer = customerService.updateCustomer(customerDTO);
         if (updatedCustomer != null) {
-            return ResponseEntity.ok("Customer has been updated");
+            return ResponseEntity.ok(updatedCustomer);
         } else {
             return ResponseEntity.notFound().build();
         }

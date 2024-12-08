@@ -32,11 +32,16 @@ public class ConfigurationService {
     }
 
     public ConfigurationDTO updateConfiguration(ConfigurationDTO configuration) {
-        int configurationID = configurationRepo.findAll().getLast().getConfigurationId();
-        configuration.setConfigurationId(configurationID);
-        configurationRepo.save(modelMapper.map(configuration, Configuration.class));
-        logger.info("Configuration Updated");
-        return modelMapper.map(configuration, ConfigurationDTO.class);
+        try {
+            int configurationID = configurationRepo.findAll().getLast().getConfigurationId();
+            configuration.setConfigurationId(configurationID);
+            configurationRepo.save(modelMapper.map(configuration, Configuration.class));
+            logger.info("Configuration Updated");
+            return modelMapper.map(configuration, ConfigurationDTO.class);
+        } catch (Exception e) {
+            logger.error("Error updating configuration", e);
+        }
+        return null;
     }
 
 
