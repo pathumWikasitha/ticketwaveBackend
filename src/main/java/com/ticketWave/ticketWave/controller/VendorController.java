@@ -48,7 +48,7 @@ public class VendorController {
         return ResponseEntity.ok(vendor);
     }
 
-    @PostMapping("createEvent")
+    @PostMapping("/createEvent")
     public ResponseEntity<EventDTO> addEvent(@RequestBody EventDTO eventDTO) {
         EventDTO event = eventService.createEvent(eventDTO);
         if (event != null) {
