@@ -5,6 +5,7 @@ import com.ticketWave.ticketWave.dto.EventDTO;
 import com.ticketWave.ticketWave.dto.SystemDTO;
 import com.ticketWave.ticketWave.dto.TicketDTO;
 import com.ticketWave.ticketWave.service.CustomerService;
+import com.ticketWave.ticketWave.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "api/v1/customer")
 @CrossOrigin
+@RequestMapping(value = "api/v1/customer")
 public class CustomerController {
 
     @Autowired
@@ -60,12 +61,4 @@ public class CustomerController {
         }
     }
 
-    @GetMapping("/{customerID}/bookings")
-    public ResponseEntity<List<TicketDTO>> getBookings(@PathVariable int customerID) {
-        List<TicketDTO> tickets = customerService.purchasedTickets(customerID);
-        if (tickets == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(tickets);
-    }
 }

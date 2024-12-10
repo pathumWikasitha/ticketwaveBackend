@@ -31,12 +31,12 @@ public class VendorController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<VendorDTO> registerVendor(@RequestBody VendorDTO vendorDTO) {
+    public ResponseEntity<Boolean> registerVendor(@RequestBody VendorDTO vendorDTO) {
         VendorDTO vendor = vendorService.registerVendor(vendorDTO);
         if (vendor == null) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.ok(false);
         }
-        return ResponseEntity.ok().body(vendor);
+        return ResponseEntity.ok(true);
     }
 
     @PutMapping("/update")

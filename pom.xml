@@ -72,30 +72,6 @@
             <artifactId>log4j</artifactId>
             <version>1.2.12</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.socket/socket.io-server -->
-        <dependency>
-            <groupId>io.socket</groupId>
-            <artifactId>socket.io-server</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.socket/engine.io-server -->
-        <dependency>
-            <groupId>io.socket</groupId>
-            <artifactId>engine.io-server</artifactId>
-            <version>4.0.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-websocket</artifactId>
-        </dependency>
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.security/spring-security-web &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
-
-
-
     </dependencies>
 
     <build>

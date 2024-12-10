@@ -15,6 +15,7 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,6 +32,40 @@ public class TicketService {
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
     }
+
+    public List<TicketDTO> getAllTicketsByVendorID(int vendorID) {
+        List<Ticket> tickets;
+        try {
+            tickets = ticketRepo.findTicketsByVendorID(vendorID);
+            if (!tickets.isEmpty()) {
+                List<TicketDTO> ticketList = modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
+                }.getType());
+                ticketList.replaceAll(this::removeCustomerVendorDetails);
+                logger.info("Get all tickets by Vendor ID :" + vendorID + " successfully");
+                return ticketList;
+            }
+        } catch (Exception e) {
+            logger.info("No tickets found with Vendor ID :" + vendorID);
+        }
+        return null;
+    }
+
+    public List<TicketDTO> purchasedTickets(int customerID) {
+        List<Ticket> tickets;
+        try {
+            tickets = ticketRepo.findTicketsByCustomerID(customerID);
+            if (!tickets.isEmpty()) {
+                List<TicketDTO> ticketList = modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {}.getType());
+                logger.info("Retrieved tickets for Customer ID: " + customerID);
+                return ticketList;
+            }
+        }catch (Exception e){
+            logger.info("No tickets found for Customer ID: " + customerID);
+
+        }
+        return null;
+    }
+
 
     public List<TicketDTO> getAllTickets() {
         List<Ticket> tickets;
@@ -60,7 +95,7 @@ public class TicketService {
                 return ticketDTO;
             }
         } catch (Exception e) {
-            logger.info("Ticket"+id+" not found");
+            logger.info("Ticket" + id + " not found");
         }
         return null;
     }
@@ -93,7 +128,7 @@ public class TicketService {
                 logger.info("Ticket save successful");
             }
         } catch (Exception e) {
-            logger.info("Customer"+customerID+" not found");
+            logger.info("Customer" + customerID + " not found");
         }
     }
 
@@ -111,7 +146,7 @@ public class TicketService {
                 return modelMapper.map(ticket, TicketDTO.class);
             }
         } catch (Exception e) {
-            logger.error("Vendor"+vendorID+" not found");
+            logger.error("Vendor" + vendorID + " not found");
         }
         return null;
 
