@@ -2,11 +2,14 @@ package com.ticketWave.ticketWave.service;
 
 import com.ticketWave.ticketWave.dto.*;
 import com.ticketWave.ticketWave.model.Customer;
+import com.ticketWave.ticketWave.model.Ticket;
 import com.ticketWave.ticketWave.model.User;
+import com.ticketWave.ticketWave.repo.TicketRepo;
 import com.ticketWave.ticketWave.repo.UserRepo;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,6 +18,7 @@ import java.util.List;
 @Service
 public class CustomerService {
     private final UserRepo userRepo;
+    private final TicketRepo ticketRepo;
     private final ModelMapper modelMapper;
     private final TicketPoolDTO ticketPoolDTO;
     private final ConfigurationService configurationService;
@@ -22,12 +26,13 @@ public class CustomerService {
     private final TicketService ticketService;
     private static final Logger logger = LogManager.getLogger(CustomerService.class);
 
-    public CustomerService(ModelMapper modelMapper, UserRepo userRepo, TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService) {
+    public CustomerService(ModelMapper modelMapper, UserRepo userRepo, TicketPoolDTO ticketPoolDTO, ConfigurationService configurationService, TicketService ticketService, TicketRepo ticketRepo) {
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
         this.ticketPoolDTO = ticketPoolDTO;
         this.configurationService = configurationService;
         this.ticketService = ticketService;
+        this.ticketRepo = ticketRepo;
     }
 
     public void stopCustomerThreads() {
@@ -108,7 +113,7 @@ public class CustomerService {
 
                                         configurationDTO.setTotalTickets(totalTickets - 1);
                                         configurationService.setConfiguration(configurationDTO); //save configuration when customer purchase a ticket
-                                        logger.info("Customer" + customerID + " purchased a"+ ticketDTO.getEvent() +"ticket.");
+                                        logger.info("Customer" + customerID + " purchased a" + ticketDTO.getEvent() + "ticket.");
 
                                         Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
                                     }
@@ -131,5 +136,21 @@ public class CustomerService {
         });
         customerThread.start();
         customerThreads.add(customerThread);
+    }
+
+    public List<TicketDTO> purchasedTickets(int customerID) {
+        List<Ticket> tickets;
+        try {
+            tickets = ticketRepo.findTicketsByCustomerID(customerID);
+            if (!tickets.isEmpty()) {
+                logger.info("Customer " + customerID + " : get all purchased tickets");
+                return modelMapper.map(tickets, new TypeToken<List<TicketDTO>>() {
+                }.getType());
+            }
+
+        } catch (Exception e) {
+            logger.info("Customer " + customerID + " : not purchased any tickets");
+        }
+        return null;
     }
 }

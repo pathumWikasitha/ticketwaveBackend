@@ -3,10 +3,13 @@ package com.ticketWave.ticketWave.controller;
 import com.ticketWave.ticketWave.dto.CustomerDTO;
 import com.ticketWave.ticketWave.dto.EventDTO;
 import com.ticketWave.ticketWave.dto.SystemDTO;
+import com.ticketWave.ticketWave.dto.TicketDTO;
 import com.ticketWave.ticketWave.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "api/v1/customer")
@@ -21,7 +24,7 @@ public class CustomerController {
 
     @GetMapping("/{customerID}")
     public ResponseEntity<CustomerDTO> getCustomer(@PathVariable int customerID) {
-        CustomerDTO customer =  customerService.getCustomer(customerID);
+        CustomerDTO customer = customerService.getCustomer(customerID);
         if (customer == null) {
             return ResponseEntity.notFound().build();
         }
@@ -50,10 +53,19 @@ public class CustomerController {
     @PostMapping("/{customerID}/purchaseTicket/{count}")
     public ResponseEntity<String> purchaseTicket(@PathVariable int customerID, @PathVariable int count, @RequestBody EventDTO eventDTO) {
         if (systemDTO.isRunning()) {
-            customerService.purchaseTicket(customerID, count,eventDTO);
+            customerService.purchaseTicket(customerID, count, eventDTO);
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.badRequest().body("System is not running");
         }
+    }
+
+    @GetMapping("/{customerID}/bookings")
+    public ResponseEntity<List<TicketDTO>> getBookings(@PathVariable int customerID) {
+        List<TicketDTO> tickets = customerService.purchasedTickets(customerID);
+        if (tickets == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(tickets);
     }
 }
