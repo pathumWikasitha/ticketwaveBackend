@@ -54,7 +54,7 @@ public class CustomerController {
     @PostMapping("/{customerID}/purchaseTicket/{count}")
     public ResponseEntity<String> purchaseTicket(@PathVariable int customerID, @PathVariable int count, @RequestBody EventDTO eventDTO) {
         if (systemDTO.isRunning()) {
-            customerService.purchaseTicket(customerID, count, eventDTO);
+            customerService.purchaseTicket(customerID, count,eventDTO);
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.badRequest().body("System is not running");

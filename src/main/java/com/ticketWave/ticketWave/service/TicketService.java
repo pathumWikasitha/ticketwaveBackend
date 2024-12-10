@@ -115,22 +115,23 @@ public class TicketService {
         return ticketDTO;
     }
 
-    public void saveTicket(int customerID, TicketDTO ticketDTO) {
-        Customer customer;
-        try {
-            customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
-            if (customer != null) {
-                Ticket ticket = new Ticket();
-                ticket.setEvent(ticketDTO.getEvent());
-                ticket.setVendor(ticketDTO.getVendor());
-                ticket.setCustomer(customer);
-                ticketRepo.save(ticket);
-                logger.info("Ticket save successful");
-            }
-        } catch (Exception e) {
-            logger.info("Customer" + customerID + " not found");
-        }
-    }
+//    public void saveTicket(int customerID, TicketDTO ticketDTO) {
+//        Customer customer;
+//        try {
+//            customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
+//            if (customer != null) {
+//                Ticket ticket = new Ticket();
+//                ticket.setEvent(ticketDTO.getEvent());
+//                ticket.setVendor(ticketDTO.getVendor());
+//                ticket.setCustomer(customer);
+//                ticketRepo.save(ticket);
+//                logger.info("Ticket save successful");
+//            }
+//        } catch (Exception e) {
+//            logger.info("Customer" + customerID + " not found");
+//        }
+//    }
+//
 
     public TicketDTO setVendor(int vendorID, EventDTO eventDTO) {
         Vendor vendor;
@@ -150,6 +151,28 @@ public class TicketService {
         }
         return null;
 
+    }
+
+    public void saveTicket(int customerID, TicketDTO ticketDTO) {
+        try {
+            // Ensure Event is persisted first
+            Event event = ticketDTO.getEvent();
+
+            // Now, save the Ticket
+            Customer customer = (Customer) userRepo.findUser(customerID, "CUSTOMER");
+            if (customer != null) {
+                Ticket ticket = new Ticket();
+                ticket.setEvent(event);  // Set the saved event
+                ticket.setVendor(ticketDTO.getVendor());
+                ticket.setCustomer(customer);
+                ticketRepo.save(ticket);  // Save the ticket
+                logger.info("Ticket successfully saved for Customer ID: " + customerID);
+            } else {
+                logger.warn("Customer with ID " + customerID + " not found.");
+            }
+        } catch (Exception e) {
+            logger.error("Error occurred while saving ticket for Customer ID " + customerID, e);
+        }
     }
 
 }
