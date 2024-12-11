@@ -104,10 +104,10 @@ public class CustomerService {
                                         TicketDTO ticketDTO = ticketPoolDTO.getSynTicketList().get(i);
                                         ticketPoolDTO.getSynTicketList().remove(ticketDTO); // Remove ticket from the pool
                                         ticketService.saveTicket(customerID, ticketDTO);
-                                        ticketsPurchased++; // Increment the purchased count
-
                                         configurationDTO.setTotalTickets(totalTickets - 1);
                                         configurationService.setConfiguration(configurationDTO); //save configuration when customer purchase a ticket
+                                        ticketsPurchased++; // Increment the purchased count
+
                                         logger.info("Customer" + customerID + " purchased a"+ ticketDTO.getEvent() +"ticket.");
 
                                         Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
