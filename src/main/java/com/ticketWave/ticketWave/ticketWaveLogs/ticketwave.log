@@ -1592,3 +1592,231 @@
 2024-12-11 02:37:40,483 [Thread-2] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket successfully saved for Customer ID: 2
 2024-12-11 02:38:43,406 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
 2024-12-11 02:38:43,414 [Thread-3] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket successfully saved for Customer ID: 2
+2024-12-11 02:41:19,289 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-11 02:41:35,241 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:41:42,264 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.UserService - Sithum (VENDOR)  logged in successfully
+2024-12-11 02:41:43,374 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:41:46,492 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:41:46,504 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:41:46,507 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:41:46,512 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 02:41:46,528 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 02:41:46,537 [Thread-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 3 released 2 tickets
+2024-12-11 02:41:49,473 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:41:49,473 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:41:49,488 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:41:49,492 [Thread-2] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 02:41:49,504 [Thread-2] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 02:41:49,515 [Thread-2] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 3 released 2 tickets
+2024-12-11 02:41:52,229 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:42:05,996 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.UserService - Pathum wikasitha  (CUSTOMER)  logged in successfully
+2024-12-11 02:42:10,226 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 02:42:11,545 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:42:11,577 [Thread-3] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket successfully saved for Customer ID: 2
+2024-12-11 02:42:11,586 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-11 02:42:11,598 [Thread-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer2 purchased aEvent(eventId=1, eventName=ff, ticketPrice=444.0, eventDescription=sd, eventLocation=dd, eventDateTime=Dec 27, 2024 • 1.31 AM IST, imageUrl=https://assets.mytickets.lk/images/events/Awarjana/Awarjana%201x1xx-1730088977503.jpg)ticket.
+2024-12-11 02:42:11,608 [Thread-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer 2 successfully purchased all requested tickets.
+2024-12-11 02:42:38,983 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:42:40,402 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 0 found
+2024-12-11 02:42:41,474 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:42:41,495 [Thread-4] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket successfully saved for Customer ID: 2
+2024-12-11 02:42:54,273 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:42:56,882 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 02:43:11,917 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 02:43:20,685 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 02:44:41,394 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:44:55,058 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer registered successfully
+2024-12-11 02:44:57,145 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 02:45:00,374 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.UserService - Sunethra (CUSTOMER)  logged in successfully
+2024-12-11 02:45:02,850 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:45:02,854 [Thread-5] INFO  com.ticketWave.ticketWave.service.TicketService - Ticket successfully saved for Customer ID: 6
+2024-12-11 02:45:02,859 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration saved
+2024-12-11 02:45:02,865 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer6 purchased aEvent(eventId=1, eventName=ff, ticketPrice=444.0, eventDescription=sd, eventLocation=dd, eventDateTime=Dec 27, 2024 • 1.31 AM IST, imageUrl=https://assets.mytickets.lk/images/events/Awarjana/Awarjana%201x1xx-1730088977503.jpg)ticket.
+2024-12-11 02:45:02,879 [Thread-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Customer 6 successfully purchased all requested tickets.
+2024-12-11 02:45:18,922 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:45:24,633 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.UserService - admin123 (ADMIN)  logged in successfully
+2024-12-11 02:45:25,644 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-11 02:45:25,659 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:45:25,663 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-11 02:45:27,952 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-11 02:45:27,965 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 02:45:27,970 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System Is Running
+2024-12-11 02:45:33,383 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:45:38,191 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.UserService - Sithum (VENDOR)  logged in successfully
+2024-12-11 02:45:39,219 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:45:40,295 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:45:45,329 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:45:47,792 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 02:45:50,354 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:45:54,479 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.UserService - Sunethra (CUSTOMER)  logged in successfully
+2024-12-11 02:45:55,661 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:45:57,198 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 6
+2024-12-11 02:46:00,693 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:05,710 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:10,733 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:15,746 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:20,770 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:25,793 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:30,812 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:36,745 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:42,741 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:48,726 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:46:54,746 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:00,735 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:06,727 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:12,732 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:18,737 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:24,744 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:30,744 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:36,740 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:42,729 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 02:47:47,771 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 09:56:16,145 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.controller.AdminController - Get System Status: System is not Running
+2024-12-11 09:56:18,445 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 09:58:05,825 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 09:58:06,778 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 09:59:38,367 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:00:54,880 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:01:00,457 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:04:34,507 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-11 10:05:39,673 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:05:43,662 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.UserService - Sithum (VENDOR)  logged in successfully
+2024-12-11 10:05:44,610 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:05:49,726 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:05:49,738 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:05:49,740 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:05:49,746 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 10:05:49,757 [Thread-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 3 released 1 tickets
+2024-12-11 10:06:16,729 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:06:21,009 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.UserService - Pathum wikasitha  (CUSTOMER)  logged in successfully
+2024-12-11 10:06:28,761 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 10:06:33,626 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:06:35,554 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 10:06:36,828 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:07:02,817 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:07:09,793 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 10:07:20,863 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 10:07:22,765 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:07:27,244 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 10:07:43,262 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:08:11,718 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 10:08:19,704 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 10:08:21,415 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:08:29,445 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:08:35,613 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.UserService - Sithum (VENDOR)  logged in successfully
+2024-12-11 10:08:36,804 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:08:37,819 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:08:42,837 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:08:47,855 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:08:52,871 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:08:54,647 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:08:54,651 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:08:54,654 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:08:59,709 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:03,694 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:09:04,723 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:09,189 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.UserService - Pathum wikasitha  (CUSTOMER)  logged in successfully
+2024-12-11 10:09:10,501 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:14,038 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 10:09:15,519 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:18,013 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:09:20,542 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:25,560 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:30,577 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:35,610 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:40,630 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:45,643 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:45,711 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 2
+2024-12-11 10:09:47,245 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:09:50,656 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:09:55,681 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:00,536 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:10:00,701 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:05,660 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.UserService - Sithum (VENDOR)  logged in successfully
+2024-12-11 10:10:06,841 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:10:06,859 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:11,882 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:28,250 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:33,271 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:38,286 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:43,305 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:48,329 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:53,352 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:58,367 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:10:58,584 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:11:03,387 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:15,935 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:16,383 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-11 10:11:21,013 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:26,029 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:31,050 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:36,080 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:41,109 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:45,330 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:11:45,334 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:11:45,337 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:11:45,344 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 10:11:45,356 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 10:11:45,370 [Thread-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 3 released 2 tickets
+2024-12-11 10:11:47,242 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:52,273 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:11:56,586 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:11:57,292 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:02,309 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:04,800 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.UserService - Pathum wikasitha  (CUSTOMER)  logged in successfully
+2024-12-11 10:12:07,345 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:09,783 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 10:12:12,366 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:14,242 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:12:17,395 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:22,412 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:27,431 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:32,459 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:37,485 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:37,995 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 10:12:40,107 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 2 found
+2024-12-11 10:12:42,309 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:12:43,955 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:48,977 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:49,529 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:12:53,996 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:12:59,011 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:04,029 [http-nio-8080-exec-5] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:09,042 [http-nio-8080-exec-7] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:14,057 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:15,765 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:13:19,071 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:23,286 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 10:13:24,348 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:29,367 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:34,387 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 10:13:39,414 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.TicketService - Get all tickets by Vendor ID :3 successfully
+2024-12-11 11:16:49,462 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 11:16:55,091 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 11:16:58,510 [http-nio-8080-exec-6] INFO  com.ticketWave.ticketWave.service.UserService - Sithum (VENDOR)  logged in successfully
+2024-12-11 11:17:00,227 [http-nio-8080-exec-2] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 11:17:07,928 [http-nio-8080-exec-8] INFO  com.ticketWave.ticketWave.service.AdminService - System started successfully
+2024-12-11 11:17:19,147 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:17:25,613 [http-nio-8080-exec-3] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 11:17:33,472 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:17:33,476 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:17:33,480 [Thread-1] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:17:33,488 [Thread-1] INFO  com.ticketWave.ticketWave.service.TicketService - Vendor set successful
+2024-12-11 11:17:33,500 [Thread-1] INFO  com.ticketWave.ticketWave.service.VendorService - Vendor 3 released 1 tickets
+2024-12-11 11:17:52,285 [http-nio-8080-exec-10] INFO  com.ticketWave.ticketWave.service.CustomerService - Get Events successful
+2024-12-11 11:17:56,384 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.UserService - Sunethra (CUSTOMER)  logged in successfully
+2024-12-11 11:17:59,890 [http-nio-8080-exec-4] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 11:18:05,251 [Thread-2] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:18:11,336 [Thread-3] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:18:17,072 [Thread-4] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:18:19,662 [http-nio-8080-exec-9] INFO  com.ticketWave.ticketWave.service.TicketService - Retrieved tickets for Customer ID: 6
+2024-12-11 11:18:42,254 [http-nio-8080-exec-1] INFO  com.ticketWave.ticketWave.service.CustomerService - Event with id 1 found
+2024-12-11 11:18:52,681 [Thread-5] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:20:03,954 [Thread-6] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:21:22,077 [Thread-7] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:22:39,726 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:22:39,729 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:22:39,731 [Thread-8] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:23:08,543 [Thread-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:23:08,547 [Thread-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found
+2024-12-11 11:23:08,549 [Thread-9] INFO  com.ticketWave.ticketWave.service.ConfigurationService - Configuration found

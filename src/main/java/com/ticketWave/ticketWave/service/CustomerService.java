@@ -108,7 +108,7 @@ public class CustomerService {
 
                                         configurationDTO.setTotalTickets(totalTickets - 1);
                                         configurationService.setConfiguration(configurationDTO); //save configuration when customer purchase a ticket
-                                        logger.info("Customer" + customerID + " purchased a" + ticketDTO.getEvent() + "ticket.");
+                                        logger.info("Customer" + customerID + " purchased a"+ ticketDTO.getEvent() +"ticket.");
 
                                         Thread.sleep(customerRetrievalRate); // Simulate retrieval delay
                                     }
@@ -132,6 +132,5 @@ public class CustomerService {
         customerThread.start();
         customerThreads.add(customerThread);
     }
-
 
 }
